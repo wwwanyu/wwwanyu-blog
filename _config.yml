@@ -109,7 +109,7 @@ deploy:
   repo: https://github.com/wwwanyu/wwwanyu
   branch: gh-pages
   token: ""
-  message: [message]
+  message: ""
   name: wwwanyu
   email: 2and3and4and1@gmail.com
   ignore_hidden: false
