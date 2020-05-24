@@ -112,6 +112,5 @@ deploy:
   message: [message]
   name: wwwanyu
   email: 2and3and4and1@gmail.com
-  extend_dirs: [extend directory]
   ignore_hidden: false
   ignore_pattern: regexp
