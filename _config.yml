@@ -105,4 +105,13 @@ node_sass:
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type: ""
+  type: git
+  repo: https://github.com/wwwanyu/wwwanyu
+  branch: gh-pages
+  token: ""
+  message: [message]
+  name: wwwanyu
+  email: 2and3and4and1@gmail.com
+  extend_dirs: [extend directory]
+  ignore_hidden: false
+  ignore_pattern: regexp
