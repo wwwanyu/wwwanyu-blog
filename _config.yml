@@ -8,7 +8,9 @@ subtitle: "designer never say die"
 description: "wanyu's works"
 keywords: web design UI UX
 author: wanyu chang
-language: en
+language:
+  - zh-tw
+  - en
 timezone: "Asia/Taipei"
 
 # URL
@@ -41,7 +43,7 @@ external_link:
   exclude: ""
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -93,7 +95,12 @@ ignore:
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: wwwanyu
+theme: wwwanyu-works
+
+node_sass:
+  outputStyle: nested
+  precision: 5
+  sourceComments: false
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
