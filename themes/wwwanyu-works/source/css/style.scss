@@ -2,6 +2,7 @@ body {
   background-color: #ffffff;
   font-family: "rooney-sans", sans-serif;
   line-height: 1.6;
+  color: #555;
 }
 main {
   position: relative;
@@ -81,4 +82,14 @@ main {
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
+}
+.article {
+  &.article-type-post {
+    max-width: 600px;
+    margin: 0 auto;
+    img {
+      max-width: 100%;
+      border-radius: 0.3rem;
+    }
+  }
 }

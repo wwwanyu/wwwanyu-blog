@@ -1,0 +1,46 @@
+<section class="mt-3 mt-sm-5 py-3 text-center">
+  <h1 class="heading">The way I see</h1>
+  <img src="/images/litsening.gif" alt="Taking notes">
+  <div class="row justify-content-center">
+    <div class="col-sm-6 my-2">
+      <p class="h3">all about UI and graphic design</p>
+    </div>
+  </div>
+</section>
+<% if (pagination == 2){ %>
+<% page.posts.each(function(post){ %>
+<%- partial('article', {post: post, index: true}) %>
+<% }) %>
+<% } else { %>
+<% var last; %>
+<% page.posts.each(function(post, i){ %>
+<% var year = post.date.year(); %>
+<% if (last != year){ %>
+<% if (last != null){ %>
+<% } %>
+<% last = year; %>
+
+<div class="row justify-content-center">
+  <div class="col-sm-6 mt-3 mb-sm-5">
+    <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
+    <ul class="list-group list-group-flush">
+      <% } %>
+      <li class="list-group-item">
+        <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+        <% }) %>
+      </li>
+      <% if (page.posts.length){ %>
+    </ul>
+  </div>
+  <% } %>
+</div>
+<% } %>
+<% if (page.total > 1){ %>
+<nav id="page-nav">
+  <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+  <%- paginator({
+      prev_text: prev_text,
+      next_text: next_text
+    }) %>
+</nav>
+<% } %>
