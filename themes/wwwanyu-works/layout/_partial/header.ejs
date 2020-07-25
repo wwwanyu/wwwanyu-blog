@@ -1,20 +1,24 @@
 <header class="sticky-top p-2">
-  <h1 class="d-flex justify-content-between align-items-center">
-    <a href="<%- url_for() %>"><%= config.title %></a>
-    <small class="h6 text-muted">
-      <% if (theme.subtitle){ %>
-      <%= theme.subtitle %>
+  <div class="d-flex align-items-center position-relative">
+    <h1 class="d-flex justify-content-between align-items-center h4 mb-0">
+      <%= config.title %>
+    </h1>
+    <nav class="d-flex ml-1">
+      <% for (let i in theme.menu){ %>
+      <a class="h4 mb-0 mr-2 <% if(is_current(theme.menu[i])){ %>active<% } %>"
+        href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
       <% } %>
-    </small>
-  </h1>
-  <nav class="d-flex">
-    <% for (var i in theme.menu){ %>
-    <a class="mr-2" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    </nav>
+    <nav>
+      <% if (theme.rss){ %>
+      <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+      <% } %>
+    </nav>
+  </div>
+  <small class="mb-0 text-muted">
+    <% if (theme.subtitle){ %>
+    <%= theme.subtitle %>
     <% } %>
-  </nav>
-  <nav>
-    <% if (theme.rss){ %>
-    <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
-    <% } %>
-  </nav>
+  </small>
+  <div class="bg"></div>
 </header>

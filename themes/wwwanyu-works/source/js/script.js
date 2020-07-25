@@ -1,5 +1,35 @@
-var copyEmail = document.querySelector('#copyBtn');
-copyEmail.addEventListener('click', function(event) {
+
+const onScroll = () => {
+  const header = document.querySelector('header .bg');
+  if (window.pageYOffset > 1) {
+    header.classList.add('scrolled');
+  } else {
+    header.classList.remove('scrolled');
+  }
+}
+
+window.addEventListener('scroll', onScroll)
+
+// var copyEmail = document.querySelector('#copyBtn');
+// copyEmail.addEventListener('click', function(event) {
+//   var emailTxt = document.querySelector('#email');
+//   var range = document.createRange();
+//   range.selectNode(emailTxt);
+//   window.getSelection().addRange(range);
+//   try {
+//     var successful = document.execCommand('copy');
+//     var msg = successful ? 'successful' : 'unsuccessful';
+//     console.log(`Copy email command was ${msg}`);
+//     var renderMsg = document.querySelector('#copied');
+//     renderMsg.className += " d-block";
+//     } catch(err) {
+//       console.log('Oops, unable to copy');
+//     }
+//   window.getSelection().removeAllRanges();
+// });
+
+function copyEmail(){
+  console.log('clicked')
   var emailTxt = document.querySelector('#email');
   var range = document.createRange();
   range.selectNode(emailTxt);
@@ -10,11 +40,12 @@ copyEmail.addEventListener('click', function(event) {
     console.log(`Copy email command was ${msg}`);
     var renderMsg = document.querySelector('#copied');
     renderMsg.className += " d-block";
-    } catch(err) {
-      console.log('Oops, unable to copy');
-    }
+  } catch (err) {
+    console.log('Oops, unable to copy');
+  }
   window.getSelection().removeAllRanges();
-});
+
+}
 
 $('.carousel').carousel({
     interval: 2400

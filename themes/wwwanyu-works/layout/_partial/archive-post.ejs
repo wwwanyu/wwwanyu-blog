@@ -1,2 +1,7 @@
-<%- partial('post/title')%>
-<%- partial('post/date', {date_format: 'MMM D'}) %>
+<div class="d-flex align-items-center h4">
+  <span class="mr-3 text-muted">
+    <%- partial('post/date', {date_format: 'MMM D'}) %>
+  </span>
+  <%- partial('post/title')%>
+</div>
+<%- post.excerpt %>
