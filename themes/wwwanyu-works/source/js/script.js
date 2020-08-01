@@ -1,6 +1,6 @@
 
 const onScroll = () => {
-  const header = document.querySelector('header .bg');
+  const header = document.querySelector('header .header-inner');
   if (window.pageYOffset > 1) {
     header.classList.add('scrolled');
   } else {
