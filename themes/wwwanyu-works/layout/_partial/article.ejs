@@ -1,4 +1,4 @@
-<main class="p-2">
+<main>
   <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
     itemprop="blogPost">
     <%- partial('post/date', {date_format: 'MMM D Y'}) %>
@@ -11,6 +11,16 @@
         </h1>
       </header>
       <% } %>
+
+      <% if (site.categories.length){ %>
+      <div class="col-12 col-md-6">
+        <h3 class="h6 mb-0"><%= __('🌋 categories') %></h3>
+        <div class="widget">
+          <%- list_categories({show_count: theme.show_count}) %>
+        </div>
+      </div>
+      <% } %>
+
       <div class="article-entry">
         <% if (post.excerpt && index){ %>
         <%- post.excerpt %>
@@ -27,15 +37,21 @@
         <%- partial('post/tag') %>
       </footer>
     </div>
-    <aside id="sidebar" <% if (theme.sidebar === 'bottom') %>>
-      <div class="row">
-        <% theme.widgets.forEach(function(widget){ %>
-        <%- partial('_widget/' + widget) %>
-        <% }) %>
-      </div>
-    </aside>
-    <% if (!index){ %>
-    <%- partial('post/nav') %>
-    <% } %>
   </article>
 </main>
+<footer>
+  <nav id="sidebar" class="container" <% if (theme.sidebar === 'bottom') %>>
+    <div class="row">
+      <% theme.widgets.forEach(function(widget){ %>
+      <%- partial('_widget/' + widget) %>
+      <% }) %>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <% if (!index){ %>
+      <%- partial('post/nav') %>
+      <% } %>
+    </div>
+  </div>
+</footer>
