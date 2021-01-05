@@ -1,6 +1,6 @@
 <% if (site.posts.length){ %>
 <div class="col-12">
-  <h3 class="h6 mb-0"><%= __('🍀recent posts') %></h3>
+  <h3 class="h6 mb-0 font-weight-bold"><%= __('Recent posts') %></h3>
   <div class="widget">
     <ul>
       <% site.posts.sort('date', -1).limit(5).each(function(post){ %>
