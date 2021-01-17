@@ -114,3 +114,5 @@ deploy:
   email: 2and3and4and1@gmail.com
   ignore_hidden: false
   ignore_pattern: regexp
+
+cname: wwwanyu.com
