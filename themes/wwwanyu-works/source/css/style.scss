@@ -18,8 +18,11 @@ body {
 }
 a {
   color: $default-color;
+  border-bottom: 2px solid rgba($primary-color, 0.5);
   &:hover {
     color: $primary-color;
+    text-decoration: none;
+    border-bottom: 2px solid rgba($primary-color, 1);
   }
 }
 .heading {
@@ -118,9 +121,10 @@ header {
     transition: all 0.2s;
     left: -70px;
     top: 130px;
-    @media screen and (max-width: 800px) {
+    @media screen and (max-width: 1024px) {
       background-color: rgba(#fff, 0.9);
       border-bottom: 1px solid rgba($default-color, 0.1);
+      left: -110px;
     }
   }
 }
@@ -146,4 +150,8 @@ a.text-dark {
   background-color: rgba($default-color, 0.2);
   border-radius: 40px;
   font-size: 0.8rem;
+}
+.category-list {
+  padding: 0 0.2rem;
+  list-style: none;
 }
