@@ -17,7 +17,7 @@
     </h2>
     <ul class="list-group list-group-flush">
       <% } %>
-      <li class="list-group-item p-0">
+      <li class="list-group-item p-0 border-0 mb-3">
         <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
         <% }) %>
       </li>
@@ -26,6 +26,8 @@
   </div>
   <% } %>
   <% } %>
+
+  <%- partial('_widget/tag') %>
 
   <% if (page.total > 1){ %>
   <nav id="page-nav">

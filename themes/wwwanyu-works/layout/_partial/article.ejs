@@ -1,16 +1,15 @@
-<main>
+<main class="container">
   <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
     itemprop="blogPost">
-    <%- partial('post/date', {date_format: 'MMM D Y'}) %>
-    <div class="article-inner">
-      <%- partial('post/gallery') %>
-      <% if (post.link || post.title){ %>
-      <header>
+    <%- partial('post/date', {date_format: 'MMM D Y' }) %>
+      <div class="article-inner">
+        <%- partial('post/gallery') %>
+          <% if (post.link || post.title){ %>
+      <header class="border-bottom mb-2">
+        <small><%- partial('post/tag') %></small>
         <h1 class="h4">
           <%- partial('post/title') %>
         </h1>
-        tags:
-        <%- partial('post/tag') %>
       </header>
       <% } %>
 
@@ -31,7 +30,7 @@
     </div>
   </article>
 </main>
-<footer>
+<footer class="pb-3">
   <nav id="sidebar" class="container" <% if (theme.sidebar === 'bottom') %>>
     <div class="row">
       <% theme.widgets.forEach(function(widget){ %>

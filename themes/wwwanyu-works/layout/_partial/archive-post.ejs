@@ -1,7 +1,9 @@
-<div class="d-flex align-items-center h4">
+<div class="d-flex flex-column flex-md-row h4">
   <span class="mr-3 text-muted">
-    <%- partial('post/date', {date_format: 'MMM D'}) %>
+    <%- partial('post/date', {date_format: 'MMM D' }) %>
   </span>
-  <%- partial('post/title')%>
+  <span class="flex-grow-1">
+    <%- partial('post/title')%>
+  </span>
 </div>
 <%- post.excerpt %>
