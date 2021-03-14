@@ -1,46 +1,46 @@
 <main class="container-fluid">
-  <% if (pagination == 2){ %>
-  <% page.posts.each(function(post){ %>
-  <%- partial('article', {post: post, index: true}) %>
+  <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
+    <% if (pagination == 2){ %>
+    <% page.posts.each(function(post){ %>
+    <%- partial('article', {post: post, index: true}) %>
   <% }) %>
   <% } else { %>
-  <% var last; %>
-  <% page.posts.each(function(post, i){ %>
-  <% var year = post.date.year(); %>
-  <% if (last != year){ %>
-  <% if (last != null){ %>
-  <% } %>
+    <% var last; %>
+    <% page.posts.each(function(post, i){ %>
+      <% var year = post.date.year(); %>
+        <% if (last != year){ %>
+        <% if (last != null){ %>
+      <% } %>
   <% last = year; %>
-  <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
-    <h2 class="h6">
+    <h2 class="h6 mt-4 mb-3">
       <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
     </h2>
     <ul class="list-group list-group-flush">
       <% } %>
-      <li class="list-group-item p-0 border-0 mb-3">
+      <li class="list-group-item p-0 border-0 mb-4">
         <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
         <% }) %>
       </li>
       <% if (page.posts.length){ %>
+        <% } %>
     </ul>
   </div>
   <% } %>
-  <% } %>
-
-  <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
-    <%- partial('_widget/tag') %>
-  </div>
-  <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
-    <%- partial('_widget/archive') %>
-  </div>
 
   <% if (page.total > 1){ %>
-  <nav id="page-nav">
-    <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
-    <%- paginator({
-      prev_text: prev_text,
-      next_text: next_text
-    }) %>
-  </nav>
-  <% } %>
-</main>
+    <nav id="page-nav">
+      <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+      <%- paginator({
+        prev_text: prev_text,
+        next_text: next_text
+      }) %>
+    </nav>
+    <% } %>
+
+    <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
+      <%- partial('_widget/tag') %>
+    </div>
+    <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
+      <%- partial('_widget/archive') %>
+    </div>
+  </main>

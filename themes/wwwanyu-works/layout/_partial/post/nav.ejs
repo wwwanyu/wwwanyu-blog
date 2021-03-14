@@ -1,5 +1,5 @@
 <% if (post.prev || post.next){ %>
-<nav id="article-nav">
+<nav id="article-nav" class="col-12">
   <% if (post.prev){ %>
   <a href="<%- url_for(post.prev.path) %>" id="article-nav-newer" class="article-nav-link-wrap">
     <strong><%= __('下一篇') %></strong>
