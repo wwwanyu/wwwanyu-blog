@@ -10,6 +10,8 @@ tag:
 
 前年衝動買的 Apple Watch Series 3，默默變成我運動的必備工具，如果出門時才發現快沒電，我會等充電再去運動
 
+<!-- more -->
+
 最常用的應該就是內建的 Activity，每天的活動量被視覺化成紅色活動圈、綠色運動圈跟藍綠色的站立圈，從 2018 年第一天使用到今天，我還是幾乎每天完成這三個圈圈
 
 <img src="apple-watch-activity-first-month.png" alt="First month of Activity" style="width: 272px;" class="mb-3 mx-auto d-block"/>
