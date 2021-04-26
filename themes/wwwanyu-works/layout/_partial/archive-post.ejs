@@ -1,9 +1,11 @@
-<div class="h5">
-  <span class="mr-3 text-muted">
+<div class="d-flex">
+  <h3>
+    <%- partial('post/title')%>
+  </h3>
+  <span class="ml-3 text-muted">
     <%- partial('post/date', {date_format: 'MMM D' }) %>
   </span>
-  <%- partial('post/title')%>
 </div>
-<blockquote class="blockquote">
+<blockquote>
   <%- post.excerpt %>
 </blockquote>

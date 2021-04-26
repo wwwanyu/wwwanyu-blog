@@ -1,5 +1,5 @@
 <main class="container-fluid">
-  <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
+  <div class="col-md-6 col-sm-9 col-12 mt-3 mb-sm-5 mx-auto">
     <% if (pagination == 2){ %>
     <% page.posts.each(function(post){ %>
     <%- partial('article', {post: post, index: true}) %>
@@ -17,10 +17,10 @@
     </h2>
     <ul class="list-group list-group-flush">
       <% } %>
+      <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
       <li class="list-group-item p-0 border-0 mb-4">
-        <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-        <% }) %>
       </li>
+      <% }) %>
       <% if (page.posts.length){ %>
         <% } %>
     </ul>
