@@ -1,4 +1,6 @@
 <% if (site.posts.length){ %>
-  <h3 class="h6 mb-0 font-weight-bold"><%= __('Archive') %></h3>
-  <%- list_archives({show_count: theme.show_count, type: theme.archive_type}) %>
+  <div class="col-12">
+    <h3 class="h6 mb-0 font-weight-bold"><%= __('Archive') %></h3>
+    <%- list_archives({show_count: theme.show_count, type: theme.archive_type}) %>
+  </div>
 <% } %>

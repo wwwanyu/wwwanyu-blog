@@ -1,11 +1,15 @@
-<div class="d-flex">
-  <h3>
-    <%- partial('post/title')%>
-  </h3>
-  <span class="ml-3 text-muted">
-    <%- partial('post/date', {date_format: 'MMM D' }) %>
-  </span>
-</div>
-<blockquote>
-  <%- post.excerpt %>
-</blockquote>
+<a itemprop="name" href="<%- url_for(post.path) %>" itemprop="url">
+  <div class="archive-post px-sm-3 px-2 pt-4 py-2">
+    <h1 class="d-inline">
+      <span class="text-title">
+        <%= post.title %>
+      </span>
+      <span class="ml-3 text-muted">
+        <%- partial('post/date', {date_format: 'MMM D' }) %>
+      </span>
+    </h1>
+    <blockquote class="text-dark">
+      <%- post.excerpt %>
+    </blockquote>
+  </div>
+</a>
