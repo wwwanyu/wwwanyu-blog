@@ -212,6 +212,10 @@ a.text-dark {
     text-decoration: none;
     color: inital;
   }
+  @media screen and(max-width: 450px) {
+    background-color: rgba($default-color, 0.1);
+    border-radius: 1rem;
+  }
 }
 .hero-heading {
   margin-left: -100px;

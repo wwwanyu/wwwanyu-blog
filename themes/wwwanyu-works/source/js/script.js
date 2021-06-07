@@ -1,4 +1,3 @@
-
 const onScroll = () => {
   const header = document.querySelector('header .header-inner');
   if (window.pageYOffset > 20) {
