@@ -1,23 +1,26 @@
 ---
-title: 我聽太多 Podcast 了
+title: I listened too many podcasts
 date: 2021-06-02 19:38:49
+category: random thoughts
 tags:
   - podcast
 ---
 
-從去年開始聽了很多 Podcast，想來分享最近喜歡的幾集。
+Here I am talking notes for podcast.
 
 ## UI breakfast
 
-因為先聽了訪問 Khoi Vinh 跟 Pablo Stanely 就訂閱了，最近這集 [Grow your design career with Scott Belsky](https://podcasts.apple.com/us/podcast/ui-breakfast-ui-ux-design-and-product-strategy/id939175693?i=1000523418929) 訪問的 Scott Belsky 是 [Behance](https://www.behance.net) 創辦人，Behance 是設計師交流視覺作品的網站，多年前被 Adobe 收購。
+The eposide [Grow your design career with Scott Belsky](https://podcasts.apple.com/us/podcast/ui-breakfast-ui-ux-design-and-product-strategy/id939175693?i=1000523418929) talked about "Should designers have side projects?"
 
-25:00 聊到 "Should designers have side projects?" Belsky 的回答很療癒。
+Since I'm working on a side project too, I'm so inspired by what Belsky replied.
+
+The previous episodes of Khoi Vinh and Pablo Stanely both worth to litsen.
 
 ---
 
 ## Wireframe
 
-主持人是 Khoi Vinh，這一季目前有兩集我非常喜歡：
+Host by Khoi Vinh. The point of view are very detail but important, it inspiring me to develop my own design philosophy.
 
 1. [How can designers support the fight for racial justice?](https://podcasts.apple.com/us/podcast/wireframe/id1437677219?i=1000521038606)
 2. [Does Burger King's new logo make you nostalgic](https://podcasts.apple.com/us/podcast/wireframe/id1437677219?i=1000516740701)

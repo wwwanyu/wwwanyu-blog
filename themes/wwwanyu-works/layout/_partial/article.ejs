@@ -1,37 +1,35 @@
 <main class="container article">
   <div class="row">
-    <div class="col-md-6 col-sm-9 col-12 mt-3 mb-sm-5 mx-auto">
-      <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
-        itemprop="blogPost">
-        <%- partial('post/date', {date_format: 'MMM D Y' }) %>
-          <div class="article-inner">
-            <%- partial('post/gallery') %>
-              <% if (post.link || post.title){ %>
-                <header class="mb-4">
-                  <small><%- partial('post/tag') %></small>
-                  <h1>
-                    <%= post.title %>
-                  </h1>
-                </header>
-                <% } %>
+    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
+      itemprop="blogPost">
+      <%- partial('post/date', {date_format: 'MMM D Y' }) %>
+        <div class="article-inner">
+          <%- partial('post/gallery') %>
+            <% if (post.link || post.title){ %>
+              <header class="mb-4">
+                <small><%- partial('post/tag') %></small>
+                <h1>
+                  <%= post.title %>
+                </h1>
+              </header>
+              <% } %>
 
-            <div class="article-entry">
-              <% if (post.excerpt && index){ %>
-              <%- post.excerpt %>
-              <% if (theme.excerpt_link){ %>
-              <p class="article-more-link">
-                <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-              </p>
-              <% } %>
-              <% } else { %>
-              <%- post.content %>
-              <% } %>
-            </div>
-            <footer class="article-footer">
-            </footer>
+          <div class="article-entry">
+            <% if (post.excerpt && index){ %>
+            <%- post.excerpt %>
+            <% if (theme.excerpt_link){ %>
+            <p class="article-more-link">
+              <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+            </p>
+            <% } %>
+            <% } else { %>
+            <%- post.content %>
+            <% } %>
           </div>
-      </article>
-    </div>
+          <footer class="article-footer">
+          </footer>
+        </div>
+    </article>
   </div>
 </main>
 <footer class="my-3 my-sm-5">

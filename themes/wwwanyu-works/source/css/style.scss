@@ -19,14 +19,12 @@ body {
 a {
   color: $primary-color;
   border-bottom: 2px solid rgba($primary-color, 0);
+  text-decoration: none;
   &:hover {
     color: $primary-color;
     text-decoration: none;
     border-bottom: 2px solid rgba($primary-color, 0.3);
   }
-}
-.heading {
-  font-family: "utopia-std-display", serif;
 }
 .btn {
   padding: 0.25rem 1rem;
@@ -96,36 +94,10 @@ a {
 }
 .article {
   &.article-type-post {
-    max-width: 600px;
     margin: 0 auto;
     img {
       max-width: 100%;
       border-radius: 0.3rem;
-    }
-  }
-}
-.active {
-  color: $primary-color;
-}
-header {
-  .scrolled {
-    position: fixed;
-    z-index: 1;
-    background-color: rgba(#fff, 0.9);
-    border-bottom: 1px solid rgba($default-color, 0.1);
-    @media screen and (min-width: 600px) {
-      transform: rotate(90deg);
-      transition: all 0.2s;
-      left: -100px;
-      top: 130px;
-      left: -110px;
-    }
-    @media screen and (max-width: 599px) {
-      bottom: 0;
-      left: 0;
-      right: 0;
-      padding: 8px 8px 20px;
-      transition: all 0.2s;
     }
   }
 }
@@ -193,9 +165,6 @@ a.text-dark {
 .archive-list-item {
   list-style: none;
 }
-.article.article-type-post {
-  max-width: initial;
-}
 .archive-post {
   &:hover {
     background-color: rgba($default-color, 0.1);
@@ -210,9 +179,6 @@ a.text-dark {
     border-radius: 1rem;
   }
 }
-.hero-heading {
-  margin-left: -100px;
-}
 .article,
 .archive {
   h1,
@@ -220,7 +186,19 @@ a.text-dark {
   h3,
   h4,
   h5,
-  h6 {
-    margin: 3rem 0 1rem 0;
+  h6,
+  time {
+    @media screen and(min-width: 450px) {
+      max-width: 600px;
+      margin: 2rem auto 1rem;
+    }
+  }
+}
+p,
+ul,
+ol{
+  @media screen and(min-width: 450px) {
+    max-width: 600px;
+    margin: 0 auto;
   }
 }

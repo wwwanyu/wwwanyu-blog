@@ -2,10 +2,8 @@
 title: Apple Watch 慢開箱
 date: 2020-07-25 20:55:55
 tag:
-  - hardware
-  - smart watch
   - Apple
-  - excercise
+  - UX
 ---
 
 前年衝動買的 Apple Watch Series 3，默默變成我運動的必備工具，如果出門時才發現快沒電，我會等充電再去運動

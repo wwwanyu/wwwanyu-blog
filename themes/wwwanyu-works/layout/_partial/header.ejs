@@ -1,14 +1,24 @@
-<header class="fixed-bottom px-4 py-2 px-md-2">
+<header class="px-4 py-2 sticky-top">
   <div class="header-inner">
-    <div class="d-flex align-items-center position-relative">
-      <h1 class="d-flex justify-content-between align-items-center h4 mb-0 mr-2">
-        <%= config.title %>
-      </h1>
-      <nav class="d-flex ml-1">
+    <div class="d-flex align-items-center row">
+      <div class="col-sm-auto">
+        <h1 class="d-flex justify-content-between align-items-center h4 mb-0 mr-2">
+          <%= config.title %>
+        </h1>
+        <small class="mb-0 text-muted">
+          <% if (theme.subtitle){ %>
+            <%= theme.subtitle %>
+          <% } %>
+        </small>
+      </div>
+      <nav class="col-sm text-end">
+        <a class="h4 mb-0 mr-2" href="/" alt="Home">
+          Home
+        </a>
         <% for (let i in theme.menu){ %>
-        <a class="h4 mb-0 mr-2 <% if(is_current(theme.menu[i])){ %>active<% } %>"
-          href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-        <% } %>
+              <a class="h4 mb-0 mr-2 <% if(is_current(theme.menu[i])){ %>active<% } %>"
+                href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+              <% } %>
       </nav>
       <nav>
         <% if (theme.rss){ %>
@@ -16,10 +26,5 @@
         <% } %>
       </nav>
     </div>
-    <small class="mb-0 text-muted">
-      <% if (theme.subtitle){ %>
-      <%= theme.subtitle %>
-      <% } %>
-    </small>
   </div>
 </header>

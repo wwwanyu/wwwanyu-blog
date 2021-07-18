@@ -1,7 +1,6 @@
 # Header
 menu:
-  🌏 work: /
-  ✏️ blog: /blog
+  Blog: /blog
 rss: /atom.xml
 
 # Content
