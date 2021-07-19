@@ -1,5 +1,5 @@
 ---
-title: The begining of Show My Gear.
+title: The beginning of Show My Gear.
 date: 2021-07-18 09:46:17
 category:
 tags:
