@@ -1,48 +1,47 @@
 <main class="container-fluid">
-  <div class="col-md-6 col-sm-9 col-12 mt-3 mb-sm-5 mx-auto">
-    <% if (pagination == 2){ %>
-    <% page.posts.each(function(post){ %>
-    <%- partial('article', {post: post, index: true}) %>
-    <% }) %>
-    <% } else { %>
-    <% var last; %>
-    <% page.posts.each(function(post, i){ %>
-      <% var year = post.date.year(); %>
-        <% if (last != year){ %>
-        <% if (last != null){ %>
-      <% } %>
-  <% last = year; %>
-    <div class="col-12">
-      <h2 class="h6 mt-4 mb-3">
-        <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
-      </h2>
-    </div>
-    <ul class="list-group list-group-flush">
-      <% } %>
-      <li class="list-group-item p-0 border-0 mb-4">
-        <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
-      </li>
+  <div class="row">
+    <div class="offset-md-3 col-md-6 col-sm-9 col-12 mt-3 mb-sm-5">
+      <% if (pagination == 2){ %>
+      <% page.posts.each(function(post){ %>
+      <%- partial('article', {post: post, index: true}) %>
       <% }) %>
-      <% if (page.posts.length){ %>
-      <% } %>
-    </ul>
-  </div>
-  <% } %>
-
-  <% if (page.total > 1){ %>
-    <nav id="page-nav">
-      <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
-      <%- paginator({
-        prev_text: prev_text,
-        next_text: next_text
-      }) %>
-    </nav>
+      <% } else { %>
+      <% var last; %>
+      <% page.posts.each(function(post, i){ %>
+        <% var year = post.date.year(); %>
+          <% if (last != year){ %>
+          <% if (last != null){ %>
+        <% } %>
+    <% last = year; %>
+      <div class="mx-3">
+        <h2 class="h6 mt-4 mb-3">
+          <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
+        </h2>
+      </div>
+      <ul class="list-group list-group-flush m-0">
+        <% } %>
+        <li class="list-group-item p-0 border-0 mb-4">
+          <%- partial('archive-post', {post: post, even: i % 2 == 0}) %>
+        </li>
+        <% }) %>
+        <% if (page.posts.length){ %>
+        <% } %>
+      </ul>
     <% } %>
 
-    <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
-      <%- partial('_widget/tag') %>
+    <% if (page.total > 1){ %>
+      <nav id="page-nav">
+        <% var prev_text = "&laquo; " + __('prev');var next_text = __('next') + " &raquo;"%>
+        <%- paginator({
+          prev_text: prev_text,
+          next_text: next_text
+        }) %>
+      </nav>
+      <% } %>
+      <div class="mx-3 d-grid gap-3">
+        <%- partial('_widget/tag') %>
+        <%- partial('_widget/archive') %>
+      </div>
     </div>
-    <div class="col-md-6 col-12 mt-3 mb-sm-5 mx-auto">
-      <%- partial('_widget/archive') %>
-    </div>
-  </main>
+  </div>
+</main>

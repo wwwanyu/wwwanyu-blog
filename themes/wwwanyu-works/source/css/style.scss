@@ -141,7 +141,8 @@ a.text-dark {
 .article-tag-list {
   padding: 0;
 }
-.tag-list {
+.tag-list,
+.archive-list {
   padding-left: 0;
 }
 .article-tag-list-item,
@@ -159,11 +160,10 @@ a.text-dark {
     color: rgba($default-color, 0.7);
   }
 }
-.archive-list {
-  padding-left: 0;
-}
 .archive-list-item {
   list-style: none;
+  display: inline-block;
+  margin-right: 1rem;
 }
 .archive-post {
   &:hover {
@@ -196,7 +196,7 @@ a.text-dark {
 }
 p,
 ul,
-ol{
+ol {
   @media screen and(min-width: 450px) {
     max-width: 600px;
     margin: 0 auto;

@@ -33,25 +33,12 @@
   </div>
 </main>
 <footer class="my-3 my-sm-5">
-  <nav id="sidebar" class="container" <% if (theme.sidebar === 'bottom') %>>
-    <div class="row">
-      <div class="col-12 col-sm-6 mx-auto">
-        <div class="row">
-          <% theme.widgets.forEach(function(widget){ %>
-          <%- partial('_widget/' + widget) %>
-          <% }) %>
-        </div>
-      </div>
-    </div>
-  </nav>
   <div class="container my-3 my-sm-5">
     <div class="row">
-      <div class="col-12 col-sm-6 mx-auto">
-        <div class="row">
-          <% if (!index){ %>
+      <div class="col-12 col-sm-7 mx-auto">
+        <% if (!index){ %>
           <%- partial('post/nav') %>
           <% } %>
-        </div>
       </div>
     </div>
   </div>
