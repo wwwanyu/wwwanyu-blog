@@ -1,5 +1,6 @@
 $primary-color: #007bff;
 $default-color: #555;
+$dark: #000;
 
 html,
 body {
@@ -178,6 +179,23 @@ a.text-dark {
     background-color: rgba($default-color, 0.1);
     border-radius: 1rem;
   }
+  img {
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    max-width: 100%;
+    border-radius: 5px;
+    float: right;
+  }
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $dark;
+  font-weight: 900;
 }
 .article,
 .archive {
