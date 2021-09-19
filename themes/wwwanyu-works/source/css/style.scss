@@ -186,7 +186,6 @@ a.text-dark {
     overflow: hidden;
     max-width: 100%;
     border-radius: 5px;
-    float: right;
   }
 }
 h1,
@@ -213,7 +212,7 @@ h6 {
     }
   }
 }
-p,
+.article-entry p,
 ul,
 ol {
   @media screen and(min-width: 450px) {
