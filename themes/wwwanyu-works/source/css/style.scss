@@ -182,7 +182,7 @@ a.text-dark {
   }
   img {
     width: 80px;
-    height: 80px;
+    height: auto;
     min-width: 80px;
     overflow: hidden;
     max-width: 100%;
@@ -221,9 +221,11 @@ ol {
     margin: 0 auto 1rem;
   }
 }
-blockquote {
-  p {
-    padding-left: 1em;
-    border-left: 2px solid $primary-color;
+article {
+  blockquote {
+    p {
+      padding-left: 1em;
+      border-left: 2px solid $primary-color;
+    }
   }
 }
