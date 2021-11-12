@@ -221,3 +221,9 @@ ol {
     margin: 0 auto 1rem;
   }
 }
+blockquote {
+  p {
+    padding-left: 1em;
+    border-left: 2px solid $primary-color;
+  }
+}
