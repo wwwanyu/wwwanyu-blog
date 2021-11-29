@@ -116,3 +116,4 @@ deploy:
   ignore_pattern: regexp
 
 cname: wwwanyu.com
+favicon: favicon.ico
