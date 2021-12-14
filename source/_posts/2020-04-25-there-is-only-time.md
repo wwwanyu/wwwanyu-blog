@@ -3,8 +3,8 @@ title: There is only time
 author: wwwanyu
 layout: post
 tags:
+  - motivation
   - podcast
-  - project management
 ---
 
 中國武漢肺炎讓人類世界停擺，驚覺一年也很快要就過半了，嚇得我趕快來抓住青春尾巴！
@@ -55,4 +55,3 @@ tags:
 Activity、時間、行事曆、氣溫、降雨率跟風向風速，抬起手腕就知道等一下有沒有要做的重要的事。
 
 <img src="apple-watch.jpg" alt="Apple Watch">
-
