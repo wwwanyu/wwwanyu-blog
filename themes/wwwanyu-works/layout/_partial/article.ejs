@@ -2,11 +2,11 @@
   <div class="row">
     <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
       itemprop="blogPost">
-      <%- partial('post/date', {date_format: 'MMM D Y' }) %>
-        <div class="article-inner">
-          <%- partial('post/gallery') %>
-            <% if (post.link || post.title){ %>
-              <header class="mb-4">
+      <div class="article-inner">
+        <%- partial('post/gallery') %>
+          <% if (post.link || post.title){ %>
+          <header class="mb-4">
+                <%- partial('post/date', {date_format: 'MMM D Y' }) %>
                 <small><%- partial('post/tag') %></small>
                 <h1>
                   <%= post.title %>

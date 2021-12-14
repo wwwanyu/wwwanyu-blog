@@ -117,7 +117,7 @@ a.text-dark {
 .text-title-list-link,
 .category-list-link,
 .archive-list-link {
-  color: $primary-color;
+  color: darken($primary-color, 30%);
   *:hover {
     text-decoration: underline;
   }
@@ -214,6 +214,7 @@ h6 {
   }
 }
 .article-entry p,
+.article-time,
 ul,
 ol {
   @media screen and(min-width: 450px) {
