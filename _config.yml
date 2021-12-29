@@ -5,12 +5,10 @@
 # Site
 title: Designer Wanyu
 subtitle: Designer never say die
-description: Wanyu Chang's works and blog about digital design.
-keywords: web design, UI/UX, illustration
+description: 張婉瑜的個人作品網站，紀錄設計專案跟相關設計心得
+keywords: web design, UI/UX, illustration, 介面設計, 網頁設計
 author: wanyu chang
-language:
-  - en
-  - zh-tw
+language: zh-tw
 timezone: "Asia/Taipei"
 ogimage: wwwanyu.png
 
@@ -20,7 +18,7 @@ url: http://wwwanyu.com
 root: /
 permalink: /blog/:title/
 permalink_defaults:
-  lang: zh-tw
+  lang: en
 pretty_urls:
   trailing_index: false # Set to false to remove trailing 'index.html' from permalinks
   trailing_html: false # Set to false to remove trailing '.html' from permalinks
