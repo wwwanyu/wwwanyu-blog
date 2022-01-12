@@ -1,0 +1,240 @@
+$primary: #1bc875;
+$dark: #584b3e;
+$light: #ececde;
+$transition: all 0.4s ease-in-out;
+$border: 2px solid $primary;
+$button-radius: 100px;
+
+:root {
+  --primary: #1bc875;
+  --dark: #584b3e;
+  --light: #ececde;
+}
+
+body {
+  background-color: $light;
+  font-size: 16px;
+  font-family: "Be Vietnam Pro", "Noto Sans TC", sans-serif;
+  color: $dark;
+}
+
+a {
+  text-decoration: none;
+}
+
+a.external-link {
+  background-color: rgba($primary, 0.3);
+  color: $dark;
+  border-radius: 3px;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: $primary;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+    z-index: -1;
+  }
+  &:hover {
+    &::after {
+      right: 0;
+      opacity: 1;
+    }
+  }
+}
+
+.button {
+  padding: 4px 15px;
+  &.primary {
+    border: $border;
+    border-radius: $button-radius;
+    background-color: transparent;
+    color: $dark;
+    &:hover {
+      background-color: $primary;
+    }
+  }
+}
+
+.header {
+  flex-direction: column;
+  @media (max-width: 768px) {
+    &.scrolled {
+      flex-direction: row;
+      align-items: center;
+      gap: 0.5rem;
+    }
+  }
+  .heading {
+    color: #fff;
+    filter: contrast(100%);
+    &:hover {
+      color: $primary;
+    }
+    @media (max-width: 768px) {
+      color: $primary;
+      &.scrolled {
+        font-size: 0.8rem;
+        font-weight: bolder;
+      }
+    }
+  }
+  @media (min-width: 769px) {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+  }
+}
+
+.global-nav {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  flex-direction: column;
+  @media (max-width: 768px) {
+    &.scrolled {
+      flex-direction: row;
+    }
+  }
+}
+
+.big {
+  font-size: 4rem;
+  font-weight: bold;
+}
+
+h1 {
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+h4 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+h5 {
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-size: 0.7rem;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.intro {
+  @media (min-width: 768px) {
+    svg {
+      height: 70vh;
+    }
+    .w-on-the-edge {
+      height: 9.5vh;
+    }
+    .w-squat {
+      height: 80vh;
+    }
+    cursor: none;
+  }
+  width: 100%;
+  transition: $transition;
+  .w-on-the-edge {
+    transition: $transition;
+  }
+  .w-squat {
+    opacity: 0;
+    transform: rotate(-180deg);
+    transition: $transition;
+    z-index: -1;
+  }
+  svg {
+    z-index: -1;
+    transition: $transition;
+    #han-part2 {
+      path {
+        opacity: 1;
+        transition: $transition;
+      }
+    }
+    #anyu {
+      path {
+        opacity: 0.1;
+        transition: $transition;
+      }
+    }
+  }
+}
+.rotate-intro {
+  @media (min-width: 768px) {
+    svg {
+      padding-top: 90px;
+      padding-left: 40px;
+    }
+  }
+  transition: $transition;
+  .w-on-the-edge {
+    transform: rotate(180deg);
+    transition: $transition;
+    opacity: 0;
+  }
+  .w-squat {
+    opacity: 1;
+    transform: rotate(0deg);
+    transition: $transition;
+  }
+  svg {
+    transform: rotate(90deg);
+    #anyu {
+      path {
+        opacity: 1;
+        transition: $transition;
+      }
+    }
+    #han-part2 {
+      path {
+        opacity: 0.1;
+        transition: $transition;
+      }
+    }
+  }
+}
+
+.intro-cursor {
+  @media (min-width: 376px) {
+    display: block;
+    position: absolute;
+    background-color: $primary;
+    width: 20px;
+    height: 20px;
+    transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
+      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
+    user-select: none;
+    pointer-events: none;
+    z-index: 10000;
+    border-radius: 100%;
+  }
+}
+
+hr {
+  border: 1px solid rgba($primary, 0.9);
+}

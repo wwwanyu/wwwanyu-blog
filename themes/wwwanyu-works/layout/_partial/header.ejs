@@ -1,30 +1,24 @@
-<header class="px-4 py-2 sticky-top">
-  <div class="header-inner">
-    <div class="d-flex align-items-center row">
-      <div class="col-sm-auto">
-        <h1 class="d-flex justify-content-between align-items-center h4 mb-0 mr-2">
+<header class="header px-4 py-2 d-flex">
+  <div class="d-flex flex-row-reverse">
+    <a class="d-blcok" href="/" title="Home">
+      <h1>
+        <span class="visually-hidden">
           <%= config.title %>
-        </h1>
-        <small class="mb-0 text-muted">
-          <% if (theme.subtitle){ %>
+        </span>
+      </h1>
+      <h2 class="heading">
+        <% if (theme.subtitle){ %>
             <%= theme.subtitle %>
-          <% } %>
-        </small>
-      </div>
-      <nav class="col-sm text-end">
-        <a class="h4 mb-0 mr-2" href="/" alt="Home">
-          Home
-        </a>
-        <% for (let i in theme.menu){ %>
-              <a class="h4 mb-0 mr-2 <% if(is_current(theme.menu[i])){ %>active<% } %>"
-                href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-              <% } %>
-      </nav>
-      <nav>
-        <% if (theme.rss){ %>
-        <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
-        <% } %>
-      </nav>
-    </div>
+            <% } %>
+        </h2>
+      </a>
   </div>
+  <nav class="global-nav">
+    <% for (let i in theme.menu){ %>
+      <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+    <% } %>
+  </nav>
+  <% if (theme.rss){ %>
+    <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
+  <% } %>
 </header>

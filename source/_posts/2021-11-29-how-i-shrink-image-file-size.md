@@ -1,6 +1,7 @@
 ---
 title: 已知用火之壓縮圖檔的這部分
 date: 2021-11-29 08:12:06
+category: output
 tags: developent
 ---
 

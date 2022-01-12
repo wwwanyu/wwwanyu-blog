@@ -1,6 +1,7 @@
 # Header
 menu:
-  Blog: /blog
+  Output: /categories/output/
+  Input: /categories/input
 
 # Content
 excerpt_link: Read More

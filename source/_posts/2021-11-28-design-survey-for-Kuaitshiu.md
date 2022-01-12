@@ -1,9 +1,11 @@
 ---
 title: Kuaitshiu 的 UI 設計準備
 date: 2021-11-28 21:22:51
+category: output
 tags:
-	- design
+	- design survey
 	- app-apeh
+	- branding
 ---
 
 Kuaitshiu 是「怪手」的台語發音，這是前公司主要產品，為土木營建業設計的資訊管理 web app。

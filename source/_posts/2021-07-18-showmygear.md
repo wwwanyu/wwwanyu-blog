@@ -1,6 +1,7 @@
 ---
 title: The beginning of Show My Gear.
 date: 2021-07-18 09:46:17
+category: project
 tags:
   - show my gear
   - design
