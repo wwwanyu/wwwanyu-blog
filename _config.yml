@@ -112,6 +112,15 @@ sitemap:
   tags: true
   categories: true
 
+server:
+  compress: true
+
+browsersync:
+  logLevel: "warn"
+  ghostMode:
+    scroll: true
+  instanceName: "uniqueString"
+
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
