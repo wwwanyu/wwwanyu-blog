@@ -2,6 +2,7 @@ $primary: #1bc875;
 $dark: #584b3e;
 $light: #ececde;
 $transition: all 0.4s ease-in-out;
+$transition-slower: all 1s ease-in-out;
 $border: 2px solid $primary;
 $button-radius: 100px;
 
@@ -20,6 +21,10 @@ body {
 
 a {
   text-decoration: none;
+  color: rgba($dark, 0.9);
+  &:hover {
+    color: $dark;
+  }
 }
 
 a.external-link {
@@ -37,13 +42,15 @@ a.external-link {
     bottom: 0;
     background-color: $primary;
     opacity: 0;
-    transition: all 0.4s ease-in-out;
+    transition: $transition;
     z-index: -1;
   }
   &:hover {
     &::after {
       right: 0;
       opacity: 1;
+      border-radius: 3px;
+      transition: $transition;
     }
   }
 }
@@ -63,31 +70,18 @@ a.external-link {
 
 .header {
   flex-direction: column;
-  @media (max-width: 768px) {
-    &.scrolled {
-      flex-direction: row;
-      align-items: center;
-      gap: 0.5rem;
-    }
-  }
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   .heading {
+    transform: $transition;
     color: #fff;
-    filter: contrast(100%);
     &:hover {
       color: $primary;
     }
     @media (max-width: 768px) {
       color: $primary;
-      &.scrolled {
-        font-size: 0.8rem;
-        font-weight: bolder;
-      }
     }
-  }
-  @media (min-width: 769px) {
-    position: fixed;
-    width: 100%;
-    z-index: 1;
   }
 }
 
@@ -97,8 +91,10 @@ a.external-link {
   justify-content: flex-end;
   gap: 0.5rem;
   flex-direction: column;
+  transform: $transition;
   @media (max-width: 768px) {
     &.scrolled {
+      transform: $transition;
       flex-direction: row;
     }
   }
@@ -112,37 +108,57 @@ a.external-link {
 h1 {
   font-size: 3.5rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 h2 {
   font-size: 3rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 h3 {
   font-size: 2.5rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 h4 {
   font-size: 2rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 h5 {
   font-size: 0.8rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 h6 {
   font-size: 0.7rem;
   font-weight: bold;
+  letter-spacing: 0.02rem;
 }
 
 p {
   font-size: 1rem;
 }
 
+@media (max-width: 768px) {
+  .big {
+    letter-spacing: -0.2rem;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1.5rem;
+    letter-spacing: -0.05rem;
+  }
+}
 .intro {
   @media (min-width: 768px) {
     svg {
@@ -158,6 +174,7 @@ p {
   }
   width: 100%;
   transition: $transition;
+  padding-top: 100px;
   .w-on-the-edge {
     transition: $transition;
   }
@@ -236,5 +253,45 @@ p {
 }
 
 hr {
-  border: 1px solid rgba($primary, 0.9);
+  border: 2px solid rgba($primary, 0.9);
+}
+
+.ioLazyload {
+  opacity: 0;
+  transform: translateX(50%);
+  transition: $transition;
+  &.loaded {
+    opacity: 1;
+    transform: translateX(0);
+    transition: $transition;
+  }
+}
+.article {
+  img {
+    margin-bottom: 1rem;
+  }
+  @media (min-width: 768px) {
+    p,
+    > ul,
+    > ol {
+      margin-left: 41.66666667%;
+      flex: 0 0 auto;
+      width: 33.33333333%;
+    }
+    img {
+      margin-left: 41.66666667%;
+      flex: 0 0 auto;
+      width: 58.33333333%;
+    }
+  }
+}
+ol,
+ul {
+  list-style-position: inside;
+}
+.topping {
+  margin-top: 60px;
+  @media (min-width: 768px) {
+    margin-top: 130px;
+  }
 }

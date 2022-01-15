@@ -1,36 +1,25 @@
-<main class="container article">
-  <div class="row">
-    <article id="<%= post.layout %>-<%= post.slug %>" class="article article-type-<%= post.layout %>" itemscope
-      itemprop="blogPost">
-      <div class="article-inner">
-        <%- partial('post/gallery') %>
-          <% if (post.link || post.title){ %>
-          <header class="mb-4">
-                <%- partial('post/date', {date_format: 'MMM D Y' }) %>
-                <small><%- partial('post/tag') %></small>
-                <h1>
-                  <%= post.title %>
-                </h1>
-              </header>
-              <% } %>
+<main class="container">
+  <article id="<%= post.layout %>-<%= post.slug %>" class="row pt-sm-5 article" itemscope itemprop="blogPost">
+    <%- partial('post/gallery') %>
+      <% if (post.link || post.title){ %>
+        <header class="col-12 mb-4">
+          <h1>
+            <%= post.title %>
+          </h1>
+          <%- partial('post/date', {date_format: 'Y-MM-D' }) %>
+          <%- partial('post/tag') %>
+        </header>
+        <% } %>
 
-          <div class="article-entry">
-            <% if (post.excerpt && index){ %>
-            <%- post.excerpt %>
-            <% if (theme.excerpt_link){ %>
-            <p class="article-more-link">
-              <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
-            </p>
-            <% } %>
-            <% } else { %>
-            <%- post.content %>
-            <% } %>
-          </div>
-          <footer class="article-footer">
-          </footer>
-        </div>
-    </article>
-  </div>
+      <% if (post.excerpt && index){ %>
+      <%- post.excerpt %>
+      <% if (theme.excerpt_link){ %>
+        <a href="<%- url_for(post.path) %>#more"><%= theme.excerpt_link %></a>
+      <% } %>
+      <% } else { %>
+          <%- post.content %>
+      <% } %>
+  </article>
 </main>
 <footer class="my-3 my-sm-5">
   <div class="container my-3 my-sm-5">

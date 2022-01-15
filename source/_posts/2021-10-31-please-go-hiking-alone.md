@@ -1,6 +1,7 @@
 ---
 title: 請獨攀
 date: 2021-10-31 11:25:43
+category: note
 tags: hiking
 ---
 

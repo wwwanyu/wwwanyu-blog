@@ -2,6 +2,7 @@
 title: There is only time
 author: wwwanyu
 layout: post
+category: note
 tags:
   - motivation
   - podcast

@@ -1,6 +1,7 @@
 ---
 title: 去中國出差
 date: 2014-02-13 07:57:18
+category: note
 tags: travel
 ---
 

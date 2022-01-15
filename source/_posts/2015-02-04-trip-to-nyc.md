@@ -1,6 +1,7 @@
 ---
 title: 在紐約的一個月
 date: 2015-02-04 13:01:20
+category: note
 tags: travel
 ---
 

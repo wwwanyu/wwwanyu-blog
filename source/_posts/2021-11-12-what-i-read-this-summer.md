@@ -1,7 +1,7 @@
 ---
 title: 2021 夏季閱讀
 date: 2021-11-12 15:51:29
-category: input
+category: note
 tags: reading
 ---
 

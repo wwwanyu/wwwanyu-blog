@@ -1,6 +1,7 @@
 ---
 title: Tongku Saveq solo hike
 date: 2019-10-10 09:52:07
+category: note
 tags: hiking
 ---
 

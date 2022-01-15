@@ -1,7 +1,7 @@
 ---
 title: I listened too many podcasts
 date: 2021-06-02 19:38:49
-category: input
+category: note
 tags:
   - podcast
 ---

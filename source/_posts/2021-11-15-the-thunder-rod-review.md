@@ -1,7 +1,7 @@
 ---
 title: 第一次看布袋戲《天雷針》
 date: 2021-11-15 10:26:11
-category: input
+category: note
 tags: reading
 ---
 

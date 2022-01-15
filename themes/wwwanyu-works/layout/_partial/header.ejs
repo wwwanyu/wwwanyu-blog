@@ -1,23 +1,27 @@
-<header class="header px-4 py-2 d-flex">
-  <div class="d-flex flex-row-reverse">
-    <a class="d-blcok" href="/" title="Home">
-      <h1>
-        <span class="visually-hidden">
-          <%= config.title %>
-        </span>
-      </h1>
-      <h2 class="heading">
-        <% if (theme.subtitle){ %>
-            <%= theme.subtitle %>
-            <% } %>
-        </h2>
-      </a>
+<header class="header d-flex container-fluid py-2">
+  <div class="row">
+    <div class="col-12">
+      <div class="d-flex flex-row-reverse">
+        <a class="d-blcok" href="/" title="Home">
+          <h1>
+            <span class="visually-hidden">
+              <%= config.title %>
+            </span>
+          </h1>
+          <h2 class="heading">
+            <% if (theme.subtitle){ %>
+                <%= theme.subtitle %>
+                <% } %>
+            </h2>
+          </a>
+      </div>
+      <nav class="global-nav">
+        <% for (let i in theme.menu){ %>
+          <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+        <% } %>
+      </nav>
+    </div>
   </div>
-  <nav class="global-nav">
-    <% for (let i in theme.menu){ %>
-      <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
-    <% } %>
-  </nav>
   <% if (theme.rss){ %>
     <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
   <% } %>

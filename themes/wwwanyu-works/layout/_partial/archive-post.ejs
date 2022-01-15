@@ -1,9 +1,10 @@
-<a itemprop="name" href="<%- url_for(post.path) %>" itemprop="url">
-  <h1 class="text-title">
+<div class="text-end">
+  <%- partial('post/date', {date_format: 'MMM Do' }) %>
+</div>
+<h1 class="py-3">
+  <a href="<%- url_for(post.path) %>" itemprop="url">
     <%= post.title %>
-  </h1>
-  <%- partial('post/date', {date_format: 'MMM D' }) %>
-    <blockquote>
-      <%- post.excerpt %>
-    </blockquote>
-</a>
+  </a>
+</h1>
+<%- partial('post/tag') %>
+  <hr>
