@@ -17,6 +17,7 @@ body {
   font-size: 16px;
   font-family: "Be Vietnam Pro", "Noto Sans TC", sans-serif;
   color: $dark;
+  line-height: 1.5;
 }
 
 a {
@@ -70,9 +71,6 @@ a.external-link {
 
 .header {
   flex-direction: column;
-  position: fixed;
-  width: 100%;
-  z-index: 1;
   .heading {
     transform: $transition;
     color: #fff;
@@ -145,11 +143,18 @@ p {
   font-size: 1rem;
 }
 
+.z-index-1 {
+  z-index: 1;
+}
+
 @media (max-width: 768px) {
   .big {
     letter-spacing: -0.2rem;
   }
-  h1,
+  h1 {
+    font-size: 1.8rem;
+    letter-spacing: -0.05rem;
+  }
   h2,
   h3,
   h4,
@@ -215,7 +220,6 @@ p {
   }
   width: 100%;
   transition: $transition;
-  padding-top: 100px;
   .w-on-the-edge {
     transition: $transition;
   }
@@ -244,6 +248,7 @@ p {
     }
   }
 }
+
 .rotate-intro {
   @media (min-width: 768px) {
     svg {
@@ -315,6 +320,11 @@ hr {
   img {
     margin-bottom: 1rem;
   }
+  iframe {
+    width: 90%;
+    margin: 0 auto;
+    display: block;
+  }
   @media (min-width: 768px) {
     p,
     > ul,
@@ -323,7 +333,8 @@ hr {
       flex: 0 0 auto;
       width: 33.33333333%;
     }
-    img {
+    img,
+    iframe {
       margin-left: 41.66666667%;
       flex: 0 0 auto;
       width: 58.33333333%;
@@ -333,10 +344,4 @@ hr {
 ol,
 ul {
   list-style-position: inside;
-}
-.topping {
-  margin-top: 60px;
-  @media (min-width: 768px) {
-    margin-top: 130px;
-  }
 }

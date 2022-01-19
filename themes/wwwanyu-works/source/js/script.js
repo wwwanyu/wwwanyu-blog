@@ -38,11 +38,11 @@ window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
   if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-    header.classList.add('position-fixed', 'scrolled');
+    header.classList.add('position-fixed', 'scrolled', 'z-index-1');
     heading.classList.add('scrolled');
     globalnav.classList.add('scrolled');
   }else{
-    header.classList.remove('position-fixed', 'scrolled');
+    header.classList.remove('position-fixed', 'scrolled', 'z-index-1');
     heading.classList.remove('scrolled');
     globalnav.classList.remove('scrolled');
   }

@@ -1,7 +1,8 @@
 <main class="container">
-  <article id="<%= post.layout %>-<%= post.slug %>" class="row pt-sm-5 article" itemscope itemprop="blogPost">
-    <%- partial('post/gallery') %>
-      <% if (post.link || post.title){ %>
+  <div class="row">
+    <article id="<%= post.layout %>-<%= post.slug %>" class="col-12 article" itemscope itemprop="blogPost">
+      <%- partial('post/gallery') %>
+        <% if (post.link || post.title){ %>
         <header class="col-12 mb-4">
           <h1>
             <%= post.title %>
@@ -20,6 +21,7 @@
           <%- post.content %>
       <% } %>
   </article>
+  </div>
 </main>
 <footer class="my-3 my-sm-5">
   <div class="container my-3 my-sm-5">
