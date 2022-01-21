@@ -1,36 +1,33 @@
-$primary: #1bc875;
-$dark: #584b3e;
-$light: #ececde;
 $transition: all 0.4s ease-in-out;
 $transition-slower: all 1s ease-in-out;
-$border: 2px solid $primary;
+$border: 2px solid var(--primary);
 $button-radius: 100px;
 
 :root {
-  --primary: #1bc875;
-  --dark: #584b3e;
-  --light: #ececde;
+  --primary: rgb(27, 200, 117);
+  --dark: rgb(88, 75, 62);
+  --light: rgb(243, 243, 233);
 }
 
 body {
-  background-color: $light;
+  background-color: var(--light);
   font-size: 16px;
   font-family: "Be Vietnam Pro", "Noto Sans TC", sans-serif;
-  color: $dark;
+  color: var(--dark);
   line-height: 1.5;
 }
 
 a {
   text-decoration: none;
-  color: rgba($dark, 0.9);
+  color: rgba(var(--dark), 0.9);
   &:hover {
-    color: $dark;
+    color: var(--dark);
   }
 }
 
 a.external-link {
-  background-color: rgba($primary, 0.3);
-  color: $dark;
+  background-color: rgba(var(--primary), 0.3);
+  color: var(--dark);
   border-radius: 3px;
   position: relative;
   transition: all 0.2s ease-in-out;
@@ -41,7 +38,7 @@ a.external-link {
     left: 0;
     top: 0;
     bottom: 0;
-    background-color: $primary;
+    background-color: var(--primary);
     opacity: 0;
     transition: $transition;
     z-index: -1;
@@ -62,9 +59,9 @@ a.external-link {
     border: $border;
     border-radius: $button-radius;
     background-color: transparent;
-    color: $dark;
+    color: var(--dark);
     &:hover {
-      background-color: $primary;
+      background-color: var(--primary);
     }
   }
 }
@@ -75,10 +72,10 @@ a.external-link {
     transform: $transition;
     color: #fff;
     &:hover {
-      color: $primary;
+      color: var(--primary);
     }
     @media (max-width: 768px) {
-      color: $primary;
+      color: var(--primary);
     }
   }
 }
@@ -290,7 +287,7 @@ p {
   @media (min-width: 376px) {
     display: block;
     position: absolute;
-    background-color: $primary;
+    background-color: var(--primary);
     width: 20px;
     height: 20px;
     transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
@@ -303,7 +300,7 @@ p {
 }
 
 hr {
-  border: 2px solid rgba($primary, 0.9);
+  border: 2px solid rgba(var(--primary), 0.9);
 }
 
 .ioLazyload {
