@@ -3,11 +3,11 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: Designer Wanyu
+title: Wanyu Chang, a web designer
 subtitle: Designer never say die
-description: 張婉瑜的個人作品網站，紀錄設計專案跟相關設計心得
+description: 你好，我是張婉瑜，我喜歡做很呆的網站。
 keywords: web design, UI/UX, illustration, 介面設計, 網頁設計
-author: wanyu chang
+author: Wanyu Chang
 language: zh-tw
 timezone: "Asia/Taipei"
 ogimage: wwwanyu-ogimage.png
@@ -82,7 +82,7 @@ meta_generator: true
 date_format: YYYY-MM-DD
 time_format: HH:mm:ss
 ## Use post's date for updated date unless set in front-matter
-use_date_for_updated: true
+updated_option: true
 
 # Pagination
 ## Set per_page to 0 to disable pagination
