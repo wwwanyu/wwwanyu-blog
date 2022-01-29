@@ -1,13 +1,13 @@
-$transition: all 0.4s ease-in-out;
-$transition-slower: all 1s ease-in-out;
-$border: 2px solid var(--primary);
-$button-radius: 100px;
-
 :root {
   --primary: rgb(27, 200, 117);
   --dark: rgb(88, 75, 62);
   --light: rgb(243, 243, 233);
 }
+
+$transition: all 0.4s ease-in-out;
+$transition-slower: all 1s ease-in-out;
+$border: 2px solid var(--primary);
+$button-radius: 100px;
 
 body {
   background-color: var(--light);
@@ -70,7 +70,6 @@ a.external-link {
   flex-direction: column;
   .heading {
     transform: $transition;
-    color: #fff;
     &:hover {
       color: var(--primary);
     }
@@ -215,9 +214,9 @@ p {
     }
     cursor: none;
   }
-  width: 100%;
   transition: $transition;
   .w-on-the-edge {
+    z-index: -1;
     transition: $transition;
   }
   .w-squat {
@@ -300,7 +299,7 @@ p {
 }
 
 hr {
-  border: 2px solid rgba(var(--primary), 0.9);
+  border: $border;
 }
 
 .ioLazyload {
@@ -341,4 +340,16 @@ hr {
 ol,
 ul {
   list-style-position: inside;
+}
+
+.future-hut {
+  height: 60vh;
+  @media (min-width: 768px) {
+    height: 100vh;
+  }
+  .front {
+    @media (min-width: 768px) {
+      height: 1000px;
+    }
+  }
 }

@@ -47,3 +47,32 @@ function scrollFunction() {
     globalnav.classList.remove('scrolled');
   }
 }
+
+gsap.registerPlugin(ScrollTrigger);
+
+const front = gsap.utils.toArray('.front');
+
+front.forEach(front => {
+  gsap.to(front,{
+    scrollTrigger: {
+      trigger: front,
+      scrub: true,
+      start: "top center",
+		  end: "center 600",
+      markers: true,
+    },
+    scale: 2,
+    xPercent: 50,
+    duration: 3,
+  })
+});
+
+gsap.to(".back", {
+  scrollTrigger: {
+    trigger: ".back",
+    scrub: true,
+  },
+  x: "+=50",
+  duration: 3,
+  opacity: 0.8
+});

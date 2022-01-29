@@ -1,6 +1,7 @@
 # Header
 menu:
   blog: /blog/
+  # reading: /reading/
 
 # Content
 excerpt_link: Read More

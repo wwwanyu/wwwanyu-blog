@@ -9,10 +9,15 @@
             </span>
           </h1>
           <h2 class="heading">
-            <% if (theme.subtitle){ %>
-                <%= theme.subtitle %>
+            <% if (config.subtitle){ %>
+                <%= config.subtitle %>
                 <% } %>
-            </h2>
+              </h2>
+              <small>
+                <% if (config.subtitle){ %>
+                <%= config.description %>
+                <% } %>
+              </small>
           </a>
       </div>
       <nav class="global-nav">

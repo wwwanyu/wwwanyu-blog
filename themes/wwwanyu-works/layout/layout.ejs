@@ -1,7 +1,7 @@
-<%- partial('_partial/head') %>
+<%- partial('_partial/head', {cache: true}) %>
 
   <body>
-    <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
+    <%- partial('_partial/header', {cache: true}) %>
       <%- body %>
   </body>
-  <%- partial('_partial/after-footer') %>
+  <%- partial('_partial/after-footer', {cache: true}) %>
