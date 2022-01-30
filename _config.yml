@@ -115,6 +115,8 @@ sitemap:
 server:
   compress: true
 
+all_minifier: true
+
 browsersync:
   logLevel: "warn"
   ghostMode:
