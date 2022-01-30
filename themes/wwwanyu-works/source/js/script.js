@@ -57,9 +57,6 @@ front.forEach(front => {
     scrollTrigger: {
       trigger: front,
       scrub: true,
-      start: "top center",
-		  end: "center 600",
-      markers: true,
     },
     scale: 2,
     xPercent: 50,
@@ -74,5 +71,6 @@ gsap.to(".back", {
   },
   x: "+=50",
   duration: 3,
+  xPercent: 50,
   opacity: 0.8
 });

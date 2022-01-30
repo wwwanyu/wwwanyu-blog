@@ -117,6 +117,10 @@ server:
 
 all_minifier: true
 
+image_minifier:
+  exclude:
+    - svg
+
 browsersync:
   logLevel: "warn"
   ghostMode:
