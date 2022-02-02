@@ -1,14 +1,14 @@
 <main class="container">
   <div class="row">
-    <article id="<%= post.layout %>-<%= post.slug %>" class="col-12 article" itemscope itemprop="blogPost">
+    <article id="<%= post.layout %>-<%= post.slug %>" class="col-12 article" itemscope itemprop="blog post">
       <%- partial('post/gallery') %>
         <% if (post.link || post.title){ %>
         <header class="col-12 mb-4">
           <h1>
             <%= post.title %>
           </h1>
-          <%- partial('post/date', {date_format: 'Y-MM-D' }) %>
           <%- partial('post/tag') %>
+          <%- partial('post/date', {date_format: 'Y-MM-D' }) %>
         </header>
         <% } %>
 

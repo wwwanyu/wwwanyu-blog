@@ -68,8 +68,6 @@ index_generator:
 
 # Category & Tag
 default_category: uncategorized
-category_map:
-tag_map:
 
 # Metadata elements
 ## https://developer.mozilla.org/en-US/docs/Web/HTML/Element/meta
@@ -115,7 +113,7 @@ sitemap:
 server:
   compress: true
 
-all_minifier: true
+all_minifier: false
 
 image_minifier:
   exclude:
@@ -142,3 +140,8 @@ deploy:
 
 cname: wwwanyu.com
 favicon: favicon.ico
+
+nofollow:
+    enable: true
+    exclude:
+    - showmygear.com
