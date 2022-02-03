@@ -1,6 +1,5 @@
 ---
-title: 404 - wwwanyu.com
-date: 2022-01-31 17:28:09
+title: 404
 permalink: /404.html
 ---
 
