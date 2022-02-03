@@ -37,7 +37,8 @@ a {
     bottom: 0;
   }
 }
-header {
+header,
+.archive {
   a {
     &:after {
       display: none;
