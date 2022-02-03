@@ -82,7 +82,7 @@ gsap.to('.cave-cover img', {
     scrub: true,
   },
   duration: 3,
-  scale: 0.3,
+  scale: 1.5,
   opacity: 1,
   yPercent: -10,
 })

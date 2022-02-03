@@ -88,6 +88,7 @@ a.external-link {
 
 .header {
   flex-direction: column;
+  pointer-events: none;
   .heading {
     transform: $transition;
     &:hover {
@@ -372,7 +373,7 @@ ul {
 }
 .cave-cover {
   img {
-    scale: 2;
+    scale: 0.5;
     opacity: 0.5;
   }
 }
