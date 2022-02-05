@@ -88,7 +88,6 @@ a.external-link {
 
 .header {
   flex-direction: column;
-  pointer-events: none;
   .heading {
     transform: $transition;
     &:hover {
