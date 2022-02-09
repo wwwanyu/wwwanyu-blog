@@ -19,7 +19,7 @@ date: 2022-02-08 21:27:30
 ## 創造值得回味的獨處時光的其中一種方式
 
 我準備了一段影片介紹我的閱塗筆記：
-<iframe id="odysee-iframe" width="90%" height="315" src="https://odysee.com/$/embed/doodle-with-wwwanyu/ffb978edef301253ddfbba41c36c6cba57162c99?r=BxGNn4YHVk4YNZ1GH1Syas2ErdoYy14s" allowfullscreen></iframe>
+<iframe width="90%" height="315" src="https://www.youtube.com/embed/P5a1cC-gksY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ---
 
