@@ -15,6 +15,7 @@ body {
   font-family: "Be Vietnam Pro", "Noto Sans TC", sans-serif;
   color: var(--dark);
   line-height: 1.5;
+  overflow-x: hidden;
 }
 
 a {
@@ -56,7 +57,6 @@ a.external-link {
     display: block;
     position: absolute;
     left: 0;
-    top: 0;
     bottom: 0;
     background-color: var(--primary);
     opacity: 0;
@@ -88,13 +88,30 @@ a.external-link {
 
 .header {
   flex-direction: column;
+  mix-blend-mode: difference;
+  color: invert(rgb(88, 75, 62));
   .heading {
     transform: $transition;
+    isolation: isolate;
     &:hover {
-      color: var(--primary);
+      color: invert(rgb(27, 200, 117));
     }
-    @media (max-width: 768px) {
-      color: var(--primary);
+  }
+  .button.primary{
+    color: rgb(213, 67, 158);
+    border-color:rgb(213, 67, 158);    
+    isolation: isolate;
+    &:hover{
+      background-color:rgb(213, 67, 158);
+      color: #000;
+    }
+  }
+  a{
+    &:hover{
+      color: invert(rgb(27, 200, 117));
+    }
+    small{
+      color: invert(rgb(88, 75, 62));
     }
   }
 }
@@ -384,3 +401,53 @@ ul {
     }
   }
 }
+
+.readler-wrap {
+  width: 200px;
+  height: 100px;
+  overflow: hidden;
+  transform: translateZ(0);
+  .readler{
+    position: absolute;
+    width: 400px;
+    height: 100px;
+    img {
+      width: 200px;
+      height: 100px;
+      float: left;
+    }
+  }
+}
+
+#readlers-group {
+  width: 200%;
+  height: 200px;
+  transform: translateZ(0) rotate(45deg);
+  @media (max-width: 768px){
+    width: 90%;
+    height: 100px;
+    overflow: hidden;
+    z-index: -1;
+    // background-color:rgba(27, 200, 117, .1);
+  }
+  #readlers {
+    position: absolute;
+    width: 100%;
+    height: 200px;
+    @media (max-width: 768px){
+      width: 480px;
+      height: 100px;
+    }
+    img {
+      width: 200px;
+      height: 200px;
+      float: left;
+      @media (max-width: 768px) {
+        width: 100px;
+        height: 100px;
+        
+      }
+    }
+  }
+}
+

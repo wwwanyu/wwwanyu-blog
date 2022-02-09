@@ -4,6 +4,7 @@ const heading = document.querySelector('.heading');
 const globalnav = document.querySelector('.global-nav');
 const lazyTarget = document.querySelectorAll('.ioLazyload');
 const front = gsap.utils.toArray('.front');
+let readlers = document.getElementById("readlers");
 
 const lazyLoad = target => {
   const io = new IntersectionObserver((entries, observer) => {
@@ -86,3 +87,10 @@ gsap.to('.cave-cover img', {
   opacity: 1,
   yPercent: -10,
 })
+
+TweenMax.to(readlers, 2, {
+  left: "-200px",
+  ease: Linear.easeNone,
+  repeat: -1
+});
+
