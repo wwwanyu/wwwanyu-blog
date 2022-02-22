@@ -359,6 +359,9 @@ hr {
     margin: 0 auto;
     display: block;
   }
+  img{
+    max-width: 100%;
+  }
   @media (min-width: 768px) {
     p,
     > ul,
