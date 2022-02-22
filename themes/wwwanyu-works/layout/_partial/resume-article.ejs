@@ -1,0 +1,96 @@
+<main class="container">
+  <div class="row">
+    <article id="<%= post.layout %>-<%= post.slug %>" class="col-12 resume" itemscope itemprop="blog post">
+      <%- partial('post/gallery') %>
+        <% if (post.link || post.title){ %>
+        <header class="col-12 mb-4">
+          <h1>
+            <%= post.title %>
+          </h1>
+          <%- partial('post/tag') %>
+          更新日期：<%- partial('post/date', {date_format: 'Y-MM-D' }) %>
+        </header>
+        <% } %>
+        <div class="sticky-top pt-4">
+          <h2>Wanyu Chang 張婉瑜</h2>
+          <p>網頁設計師</p>
+          <h3>Projects</h3>
+        </div>
+        <div class="col-sm-6 col-12 offset-sm-6">
+          <h4>曬裝備</h4>
+          <div>2021 — Present</div>
+          <p>
+            方便分享的高山裝備管理功能網站。<br/>
+            在 Pace Design 的同事 Ruoshin 在初期就加入，並邀請後端工程師 Ruby 一起揮灑創作！
+          </p>
+          <ul>
+            <li>我學會帶著尊重夥伴並讓他們覺得有趣跟成就感的意圖。</li>
+            <li>接受 Ruoshin 建議我學習寫 end to end 測試。</li>
+            <li>設計了我個人最活躍的 Design system。</li>
+            <li>加強非同步溝通。</li>
+          </ul>
+          <hr>
+          <h4>Kuaitshiu</h4>
+          <div>2019 — 2021</div>
+          <p>
+            土木營建專案使用的資訊功能網站。<br>
+            需要考量包含業主、承包商不同角度的使用者需求以及法律合規。<br>
+            <ul>
+              <li>讓內部理解為什麼以及如何訪談使用者。</li>
+              <li>升級開發流程：從原生 PHP 改用 Laravel、採用 GIT 跟自動部署。</li>
+              <li>執行 Style tile 讓內部輕鬆並體會設計介面的考量。</li>
+            </ul>
+          </p>
+          <hr>
+          <h4>App Apeh</h4>
+          <div>2019 — 2021</div>
+          <p>
+            土木業與軟體設計跨領域小團隊的品牌設計。<br>
+            這個團隊只有三個人，是為了要開發土木營建功能網站而成立的。<br>
+            設計上的挑戰是如何讓團隊內部達到對外呈現的共識。
+          </p>
+          <hr>
+          <h4>Saviah</h4>
+          <div>
+            2017 — 2018
+          </div>
+          <p>
+            翻修專為公益團體使用的捐款管理功能網站。<br>
+            原本的版本被使用很多年，但我觀察到客服人員還是經常以很長的電話輔助使用者，所以有客服同事可以訪問對我來說很有幫助。<br>
+            這個專案在開發部分也頗具挑戰，例如仍使用手動 FTP 部署以及未採用版本控制。
+            <ul>
+              <li>拆解原本功能對於使用者的意義是什麼。</li>
+              <li>與 MIS 同事合作架了 GitLab 在公司內部推廣。</li>
+            </ul>
+          </p>
+          <hr>
+          <h4>Nucleus</h4>
+          <div>2016 — 2017</div>
+          <p>我當時的能力遠低於這個專案需要的，所以身心靈鼻青臉腫。<br>我在這裡學會 GIT 基本操作。</p>
+          <hr>
+          <h4>Pace Design</h4>
+          <div>2014 — 2015</div>
+          <p>在這家品牌設計公司上班時，我提案成功的設計有屋馬燒肉跟台中歌劇院。</p>
+          <hr>
+          <h4>Viro</h4>
+          <div>2013 — 2014 </div>
+          <p>替以廉價寢具起家的床墊工廠想推出提升價值感，所設計的品牌。</p>
+          <hr>
+          <h4>Taiwan Sugar Corp</h4>
+          <div>2012 - 2013</div>
+          <p>在台糖電商網站我學到了即使只是被當作美工看待還是可以提出對網站、銷售的計畫。</p>
+        </div>
+  </article>
+  </div>
+</main>
+<footer class="my-3 my-sm-5">
+  <div class="container my-3 my-sm-5">
+    <div class="row">
+      <div class="col-12 col-sm-7 mx-auto">
+        <% if (!index){ %>
+          <%- partial('post/nav') %>
+          <% } %>
+      </div>
+    </div>
+  </div>
+</footer>
