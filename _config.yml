@@ -129,7 +129,7 @@ browsersync:
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/wwwanyu/wwwanyu
+  repo: git@github.com:wwwanyu/wwwanyu-blog-build.git
   branch: gh-pages
   token: ""
   message: ""
