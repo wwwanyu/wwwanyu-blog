@@ -50,47 +50,30 @@ function scrollFunction() {
   }
 }
 
-gsap.registerPlugin(ScrollTrigger);
+var frames = document.querySelector(".frames");
 
-front.forEach(front => {
-  gsap.to(front,{
-    scrollTrigger: {
-      trigger: front,
-      scrub: true,
-    },
-    scale: 2,
-    xPercent: 20,
-    duration: 3,
-  })
+var spriteSheet = {
+  width: 98,
+  height: 88,
+  total: 12,
+  cols: 12,
+  rows: 1,
+  duration: 3
+};
+
+TweenLite.set(frames, { 
+  force3D: true,
+  scrollTrigger:{
+    trigger: ".frames",
+    scrub: true
+  }
 });
 
-gsap.to(".back", {
-  scrollTrigger: {
-    trigger: ".back",
-    scrub: true,
-  },
-  x: "+=50",
-  duration: 3,
-  xPercent: 50,
-  opacity: 0.8
-});
+var tl = new TimelineMax({ repeat: -1});
 
-gsap.to('.cave-cover img', {
-  scrollTrigger: {
-    trigger: '.cave-cover',
-    start: 'top center',
-    end: '+=200',
-    scrub: true,
-  },
-  duration: 3,
-  scale: 1.5,
-  opacity: 1,
-  yPercent: -10,
-})
-
-TweenMax.to(readlers, 2, {
-  left: "-200px",
-  ease: Linear.easeNone,
-  repeat: -1
-});
-
+for (var i = 0; i < spriteSheet.total; i++) {  
+  tl.set(frames, {
+    x: (i % spriteSheet.cols) * -spriteSheet.width,
+    y: Math.floor(i / spriteSheet.cols) * -spriteSheet.height
+  }, i / (spriteSheet.total - 1) * spriteSheet.duration);
+}

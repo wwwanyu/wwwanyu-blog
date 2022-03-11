@@ -1,73 +1,67 @@
-<main class="container-fluid">
-  <div class="mb-5">
+<main>
+  <div class="container-fluid mb-5">
     <%- partial("_partial/intro") %>
   </div>
-  <hr>
-  <div class="container-fluid ">
-    <h3>我最近在做...</h3>
-    <section class="my-5">
-      <h4 class="mb-5">閱塗筆記</h4>
-      <div id="readlers-group">
-        <div id="readlers">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
-          <img class="ioLazyload" data-lazy="images/readler.png" alt="一個人物雙手拿著鉛筆表情很開心，雙腿交叉像在跳舞">
+  <div class="bg-green-o50">
+    <div class="container-fluid">
+    <h3>作品</h3>
+    <div class="row">
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+          <h4>曬裝備</h4>
+          <img class="img-fluid ioLazyload" data-lazy="images/smg-logo.svg" alt="曬裝備 logo">
+          <div class="col-12">
+            <a class="external-link" href="https://www.showmygear.com" title="曬裝備">showmygear.com</a>
+            <p>曬裝備是一個為了方便分享檢查所設計的高山裝備檢查表。</p>
+          </div>
+        </section>
+      </div>
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+        <h4>ruoshing.wang</h4>
+        很榮幸有機會設計前端工程師 Ruoshin 的個人烘培機。
+        <img class="img-fluid ioLazyload" data-lazy="/images/project-ruoshin.png" alt="ruoshing.wang">
+        </section>
+      </div>
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+          <h4>未來山屋</h4>
+          <p>一千年後的火星台灣人回來地球爬山的故事。</p>
+          <img class="img-fluid ioLazyload" data-lazy="/images/project-future-hut.jpg" alt="北北峰">
+        </section>
+      </div>      
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+          <h4>紙杯</h4>
+          <p><a title="紙杯" href="/cup">關於出發的小故事。</a></p>
+            <img class="img-fluid ioLazyload" data-lazy="images/cave-draft.png" alt="用簡單的線條畫的插圖，在兩座山頂上各有一個一紙杯，其中一個紙杯口旁站著一個人，這個人手扶著紙杯邊緣，這個人物的大小跟紙杯差不多，他看著遠方另外一座山頂上的紙杯。這兩個紙杯的底部都有線。">
+        </section>    
+      </div>
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+        <h4>hellyes.cat</h4>      
+        <p>關於黑貓的傳說都是真的。</p>
+        <img class="img-fluid ioLazyload" data-lazy="/images/project-hellyescat.png" alt="HELLYESCAT">
+      </section>  
+      </div>
+      <div class="col-12 col-sm-3 mb-3">
+        <section class="bg-light">
+          <h4>閱塗筆記</h4>
+          <p><a title="閱塗筆記@六合圖書館" href="/readle-note">閱塗筆記@六合圖書館</a></p>
+            <img class="img-fluid ioLazyload" data-lazy="images/readler.png" alt="雙手拿著筆笑得很開心的人物，腿交叉站。">
+        </section>    
+      </div>
+    </div>
+  </div>
+  </div>
+  <div class="container-fluid">
+    <section>
+      <h3>最近閱讀</h3>
+      <div class="book">
+        <div class="frames">
+          <img src="/images/book-spritesheet.png" alt="this is a book">
         </div>
       </div>
-      <p>你也喜歡閱讀嗎？有空的話跟我一起塗鴉出你的閱讀心得吧！</p>
-      <a title="閱讀塗鴉" href="/readle-note">更多</a>
-
-    </section>
-    <hr>
-    <section class="row my-5">
-      <h4>曬裝備</h4>
-      <div class="my-4">
-        <img class="img-fluid ioLazyload" data-lazy="images/smg-logo.svg" alt="曬裝備 logo">
-      </div>
-      <div class="col-12">
-        <a class="external-link" href="https://showmygear.com" title="曬裝備">showmygear.com</a>
-        <p>
-          曬裝備是一個為了方便分享檢查所設計的高山裝備檢查表。
-        </p>
-      </div>
-    </section>
-    <hr>
-    <section>
-      <h4>未來山屋</h4>
-      <p>一千年後的火星台灣人回來地球爬山的故事。</p>
-      <div id="futurehut" class="position-relative overflow-hidden future-hut">
-        <img class="img-fluid position-absolute front hut" style="z-index: -1; top: 0;"
-          src="images/tongku-saveq-weather-station.png" alt="">
-        <img class="img-fluid position-absolute front trees" style="z-index: -2; top: 0;"
-          src="images/tongku-saveq-trees.png" alt="">
-        <img class="img-fluid position-absolute front" style="z-index: -4; top: 0;"
-          src="images/tongku-saveq-weather-mount-detail.png">
-        <img class="img-fluid position-absolute front" style="z-index: -3; top: 0;"
-          src="images/tongku-saveq-right-mount.png" alt="">
-        <img class="img-fluid position-absolute back" style="z-index: -5; right: 0; opacity: 0.1;"
-          src="images/tongku-saveq-faraway-mount.png" alt="">
-      </div>
-    </section>
-    <hr>
-    <section>
-      <h4>紙杯</h4>
-      <p>關於出發的小故事。</p>
-      <a title="紙杯" href="/cup">更多</a>
-      <div id="cave" class="position-relative overflow-hidden cave-cover">
-        <img class="img-fluid position-absolute" src="images/cave-draft.png"
-          alt="用簡單的線條畫的插圖，在兩座山頂上各有一個一紙杯，其中一個紙杯口旁站著一個人，這個人手扶著紙杯邊緣，這個人物的大小跟紙杯差不多，他看著遠方另外一座山頂上的紙杯。這兩個紙杯的底部都有線。">
-      </div>
-    </section>
-    <hr>
-    <section style="height: 40vh;">
-      <h4>書單</h4>
       <ul class="list-group-horizontal-sm list-group">
         <li class="me-4">
           <cite>成為西蒙波娃</cite>
@@ -110,5 +104,10 @@
         </li>
       </ul>
     </section>
+    <hr>
+    <section class="my-5">
+      <p>如果你覺得以上都看不懂，我是也有<a href="/resume">履歷</a>啦。</p>
+    </section>
   </div>
 </main>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>

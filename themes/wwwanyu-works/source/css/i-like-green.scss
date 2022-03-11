@@ -383,74 +383,15 @@ ul {
   list-style-position: inside;
 }
 
-.future-hut,
-.cave-cover {
-  height: 40vh;
-  @media (min-width: 768px) {
-    height: 70vh;
-  }
-}
-.cave-cover {
-  img {
-    scale: 0.5;
-    opacity: 0.5;
-  }
-}
-
-.future-hut {
-  .front {
-    @media (min-width: 768px) {
-      height: 1000px;
-    }
-  }
-}
-
-.readler-wrap {
-  width: 200px;
-  height: 100px;
+.book{
   overflow: hidden;
-  transform: translateZ(0);
-  .readler{
-    position: absolute;
-    width: 400px;
-    height: 100px;
-    img {
-      width: 200px;
-      height: 100px;
-      float: left;
-    }
-  }
+  width: 98px;
+  height: 88px;
 }
 
-#readlers-group {
-  width: 200%;
-  height: 200px;
-  transform: translateZ(0) rotate(45deg);
-  @media (max-width: 768px){
-    width: 90%;
-    height: 100px;
-    overflow: hidden;
-    z-index: -1;
-    // background-color:rgba(27, 200, 117, .1);
-  }
-  #readlers {
-    position: absolute;
-    width: 100%;
-    height: 200px;
-    @media (max-width: 768px){
-      width: 480px;
-      height: 100px;
-    }
-    img {
-      width: 200px;
-      height: 200px;
-      float: left;
-      @media (max-width: 768px) {
-        width: 100px;
-        height: 100px;
-        
-      }
-    }
-  }
+.bg-green-o50{
+  background-color: rgba(27, 200, 117, .25);
 }
-
+.bg-light{
+  background-color: var(--light) !important;
+}
