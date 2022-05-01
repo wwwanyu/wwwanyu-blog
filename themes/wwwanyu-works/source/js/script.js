@@ -25,12 +25,6 @@ const lazyLoad = target => {
 
 lazyTarget.forEach(lazyLoad);
 
-if(rotateEng){
-  rotateEng.addEventListener('click', function () {
-    rotateEng.classList.toggle('rotate-intro');
-  });
-}
-
 $('.intro').mousemove(function(e) {
   $('.intro-cursor').eq(0).css({ left: e.pageX, top: e.pageY }); });
   $('.intro').on("mousemove", function(e) { mouseX = e.pageX; mouseY = e.pageY; }
@@ -39,7 +33,7 @@ $('.intro').mousemove(function(e) {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if(document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+  if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
     header.classList.add('position-fixed', 'scrolled', 'z-index-1');
     heading.classList.add('scrolled');
     globalnav.classList.add('scrolled');
