@@ -23,14 +23,19 @@
   </article>
   </div>
 </main>
+
+<% if (!index){ %>
 <footer class="my-3 my-sm-5">
-  <div class="container my-3 my-sm-5">
+  <div class="container">
     <div class="row">
       <div class="col-12 col-sm-7 mx-auto">
-        <% if (!index){ %>
-          <%- partial('post/nav') %>
-          <% } %>
+        <%- partial('post/nav') %>
       </div>
     </div>
   </div>
 </footer>
+<% } %>
+
+<% if (!index){ %>
+  <%- partial('content-footer')%>
+<% } %>

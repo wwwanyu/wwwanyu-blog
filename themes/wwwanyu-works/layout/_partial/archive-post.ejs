@@ -1,11 +1,10 @@
 <div class="text-end">
   <%- partial('post/date', {date_format: 'MMM Do' }) %>
 </div>
-<h1 class="py-3">
+<h2 class="py-3">
   <a href="<%- url_for(post.path) %>" itemprop="url">
     <%= post.title %>
   </a>
-</h1>
-<%- partial('post/tag') %>
-  <%- partial('post/category') %>
-    <hr>
+</h2>
+<%- post.excerpt %>
+<hr>

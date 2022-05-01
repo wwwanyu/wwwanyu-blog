@@ -77,3 +77,91 @@ for (var i = 0; i < spriteSheet.total; i++) {
     y: Math.floor(i / spriteSheet.cols) * -spriteSheet.height
   }, i / (spriteSheet.total - 1) * spriteSheet.duration);
 }
+
+ScrollTrigger.matchMedia({
+  "(min-width: 768px)": function(){
+    let wSquat = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".intro",
+        start: "-100px",
+        end: "+=300px",
+        scrub: true,
+      }
+    });
+    
+    wSquat.to(".w-squat", {opacity: 0, rotation: 100})
+          .to(".w-squat", {opacity: 1, rotation: -90, x:180});
+    
+    gsap.to(".intro", {
+      scrollTrigger: {
+        trigger: ".intro",
+        toggleActions: "none none reverse none",
+        start: "top",
+        end: "+=300px",
+        scrub: true,
+      },
+      rotation: 90,
+      ease: "none",
+      duration: 1
+    });
+    
+    gsap.to(".w-on-the-edge", {
+      scrollTrigger: {
+        trigger: ".intro",
+        toggleActions: "none none reverse none",
+        start: "top",
+        end: "+=300px",
+        scrub: true,
+      },
+      rotation: 180,
+      x: 200,
+      opacity: 0
+    });
+  },
+
+  "(max-width: 767px)": function(){
+    let wSquat = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".intro",
+        toggleActions: "none none reverse none",
+        start: "-50px 10px",
+        end: "center",
+        scrub: true,
+        pin: true,
+      }
+    });
+    
+    wSquat.to(".w-squat", {opacity: 0, rotation: 100})
+          .to(".w-squat", {opacity: 1, rotation: -90});
+    
+    gsap.to(".intro", {
+      scrollTrigger: {
+        trigger: ".intro",
+        toggleActions: "none none reverse none",
+        start: "-50px 10px",
+        end: "center",
+        scrub: true,
+        pin: true
+      },
+      rotation: 90,
+      duration: 1
+    });
+    
+    gsap.to(".w-on-the-edge", {
+      scrollTrigger: {
+        trigger: ".intro",
+        toggleActions: "none none reverse none",
+        start: "-50px 10px",
+        end: "center",
+        scrub: true,
+        pin: true
+      },
+      rotation: 180,
+      x: 200,
+      opacity: 0
+    });
+  }
+});
+
+footerWsquat.to(".gsap-footer-wsquat", { opacity: 0, rotation: -180 })
+

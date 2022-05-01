@@ -8,6 +8,7 @@ $transition: all 0.4s ease-in-out;
 $transition-slower: all 1s ease-in-out;
 $border: 2px solid var(--primary);
 $button-radius: 100px;
+$parimary-opacity-50: rgba(27, 200, 117, .25);
 
 body {
   background-color: var(--light);
@@ -19,14 +20,12 @@ body {
 }
 
 a {
-  text-decoration: none;
-  color: rgba(var(--dark), 0.9);
-  &:hover {
-    color: var(--dark);
-  }
-}
-a {
   position: relative;
+  text-decoration: none;
+  color: rgba(var(--dark), 0.8);
+  &:hover {
+    color: var(--primary);
+  }
   &:after {
     content: "";
     width: 100%;
@@ -38,6 +37,7 @@ a {
     bottom: 0;
   }
 }
+
 header,
 .archive {
   a {
@@ -240,7 +240,12 @@ p {
 }
 
 .intro {
+  z-index: -1;
+  @media (max-width: 767px){
+    overflow: hidden;
+  }
   @media (min-width: 768px) {
+    position: fixed;
     svg {
       height: 70vh;
     }
@@ -248,7 +253,7 @@ p {
       height: 9.5vh;
     }
     .w-squat {
-      height: 80vh;
+      height: 60vh;
     }
     cursor: none;
   }
@@ -259,8 +264,6 @@ p {
   }
   .w-squat {
     opacity: 0;
-    transform: rotate(-180deg);
-    transition: $transition;
     z-index: -1;
   }
   svg {
@@ -297,8 +300,8 @@ p {
     opacity: 0;
   }
   .w-squat {
-    opacity: 1;
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: rotate(180deg);
     transition: $transition;
   }
   svg {
@@ -392,6 +395,36 @@ ul {
 .bg-green-o50{
   background-color: rgba(27, 200, 117, .25);
 }
-.bg-light{
-  background-color: var(--light) !important;
+
+.landing-card{
+  border: solid 2px transparent;
+  margin: 1rem 0 0 0;
+  @media (min-width: 768px) {
+    transition: $transition;
+    &:hover{
+      border: $border;
+      background-color: var(--light);
+      margin: 0 0 1rem 0;
+    }
+  }
+}
+
+.article-nav-link-wrap{
+  &:focus,
+  &:active{
+    background-color: $parimary-opacity-50;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.rotate {
+  animation: rotation 80s linear infinite;
 }

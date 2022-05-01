@@ -13,7 +13,7 @@
           <% if (last != null){ %>
         <% } %>
         <% last = year; %>
-      <div class="big topping">
+      <div class="topping">
         <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
       </div>
       <ul class="list-unstyled m-0">
@@ -38,3 +38,4 @@
     </div>
   </div>
 </main>
+
