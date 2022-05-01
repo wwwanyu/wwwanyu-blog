@@ -241,10 +241,10 @@ p {
 
 .intro {
   z-index: -1;
-  @media (max-width: 767px){
+  @media (max-width: 1365px){
     overflow: hidden;
   }
-  @media (min-width: 768px) {
+  @media (min-width: 1366px) {
     position: fixed;
     svg {
       height: 70vh;
@@ -392,19 +392,23 @@ ul {
   height: 88px;
 }
 
+.bg-green{
+  background-color: var(--primary);
+}
+
 .bg-green-o50{
   background-color: rgba(27, 200, 117, .25);
 }
 
 .landing-card{
-  border: solid 2px transparent;
-  margin: 1rem 0 0 0;
-  @media (min-width: 768px) {
-    transition: $transition;
+  margin: 0 1rem 0 0;
+  transition: $transition;
+  background-color: #fff;
+  @media (min-width: 1366px) {
     &:hover{
-      border: $border;
-      background-color: var(--light);
-      margin: 0 0 1rem 0;
+      color:rgba(var(--light), 0.8);
+      margin: 0 0 0 1rem;
+      box-shadow: 0 5px 5px rgba(88, 75, 62, .1);
     }
   }
 }

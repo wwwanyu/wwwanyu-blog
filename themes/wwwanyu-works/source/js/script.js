@@ -73,7 +73,7 @@ for (var i = 0; i < spriteSheet.total; i++) {
 }
 
 ScrollTrigger.matchMedia({
-  "(min-width: 768px)": function(){
+  "(min-width: 1366px)": function(){
     let wSquat = gsap.timeline({
       scrollTrigger: {
         trigger: ".intro",
@@ -113,7 +113,7 @@ ScrollTrigger.matchMedia({
     });
   },
 
-  "(max-width: 767px)": function(){
+  "(max-width: 1365px)": function(){
     let wSquat = gsap.timeline({
       scrollTrigger: {
         trigger: ".intro",
@@ -121,7 +121,6 @@ ScrollTrigger.matchMedia({
         start: "-50px 10px",
         end: "center",
         scrub: true,
-        pin: true,
       }
     });
     
@@ -135,7 +134,6 @@ ScrollTrigger.matchMedia({
         start: "-50px 10px",
         end: "center",
         scrub: true,
-        pin: true
       },
       rotation: 90,
       duration: 1
