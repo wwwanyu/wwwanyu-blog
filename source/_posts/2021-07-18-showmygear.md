@@ -1,10 +1,8 @@
 ---
 title: 開始曬裝備
 date: 2021-07-18 09:46:17
-category: project
 tags:
   - show my gear
-  - design
 ---
 
 起點大概是我想要有個可以分辨分享的登山裝備檢查表。

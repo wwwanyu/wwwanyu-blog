@@ -6,7 +6,7 @@ tags: reading
 ---
 
 我 36 歲才第一次看布袋戲，對我來說不是童年回憶而是新體驗！
-{% asset_img d-block mx-auto tiger.jpeg %}
+{% asset_img d-block mx-auto img-fluid tiger.jpeg %}
 
 <!--more-->
 
