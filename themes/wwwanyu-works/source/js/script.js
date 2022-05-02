@@ -33,13 +33,11 @@ $('.intro').mousemove(function(e) {
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
-  if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10) {
+  if(document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
     header.classList.add('position-fixed', 'scrolled', 'z-index-1');
-    heading.classList.add('scrolled');
     globalnav.classList.add('scrolled');
   }else{
     header.classList.remove('position-fixed', 'scrolled', 'z-index-1');
-    heading.classList.remove('scrolled');
     globalnav.classList.remove('scrolled');
   }
 }

@@ -95,34 +95,35 @@ header,
 
 .header {
   flex-direction: column;
-  mix-blend-mode: difference;
-  color: invert(rgb(88, 75, 62));
-  .heading {
-    transform: $transition;
-    isolation: isolate;
-    &:hover {
-      color: invert(rgb(27, 200, 117));
+  &.scrolled{
+    mix-blend-mode: difference;
+    top: 0;
+    .heading {
+      color: rgb(167, 180, 193);
+      isolation: isolate;
+      &:hover {
+        color: invert(rgb(27, 200, 117));
+      }
     }
-  }
-  .button.primary{
-    color: rgb(213, 67, 158);
-    border-color:rgb(213, 67, 158);    
-    isolation: isolate;
-    &:hover{
-      background-color:rgb(213, 67, 158);
-      color: #000;
+    .button.primary{
+      color: rgb(213, 67, 158);
+      border-color:rgb(213, 67, 158);    
+      isolation: isolate;
+      &:hover{
+        background-color:rgb(213, 67, 158);
+        color: #000;
+      }
     }
-  }
-  a{
-    &:hover{
-      color: invert(rgb(27, 200, 117));
-    }
-    small{
-      color: invert(rgb(88, 75, 62));
+    a{
+      &:hover{
+        color: invert(rgb(27, 200, 117));
+      }
+      small{
+        color: invert(rgb(167, 180, 193));
+      }
     }
   }
 }
-
 .global-nav {
   display: flex;
   align-items: flex-end;
@@ -408,10 +409,10 @@ ul {
 }
 
 .landing-card{
-  margin: 0 1rem 0 0;
   transition: $transition;
   background-color: #fff;
   @media (min-width: 1366px) {
+    margin: 0 1rem 0 0;
     &:hover{
       color:rgba(var(--light), 0.8);
       margin: 0 0 0 1rem;
