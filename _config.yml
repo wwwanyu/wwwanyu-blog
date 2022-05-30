@@ -113,7 +113,7 @@ sitemap:
 server:
   compress: true
 
-all_minifier: true
+all_minifier: false
 
 image_minifier:
   exclude:

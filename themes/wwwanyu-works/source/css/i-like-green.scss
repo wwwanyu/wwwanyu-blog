@@ -38,6 +38,15 @@ a {
   }
 }
 
+.txt-primary{
+  color: var(--primary);
+}
+
+.card a{
+  &::after{
+    display: none;
+  }
+}
 a.external-link {
   background-color: rgba(var(--primary), 0.3);
   color: var(--dark);

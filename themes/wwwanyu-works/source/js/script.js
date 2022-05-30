@@ -152,6 +152,3 @@ ScrollTrigger.matchMedia({
     });
   }
 });
-
-footerWsquat.to(".gsap-footer-wsquat", { opacity: 0, rotation: -180 })
-
