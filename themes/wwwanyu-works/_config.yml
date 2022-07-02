@@ -1,8 +1,9 @@
 # Header
 menu:
   blog: /blog/
-  newsletter: https://wwwanyu.mailchimpsites.com
+  booklist: /booklist/
   shop: /shop/
+  letter⌲: https://wwwanyu.mailchimpsites.com
 
 # Content
 excerpt_link: Read More

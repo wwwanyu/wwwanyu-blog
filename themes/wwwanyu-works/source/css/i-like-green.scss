@@ -472,6 +472,9 @@ ul {
   user-select: none;
   transform: skewY(-15deg);
   color: #FFF;
+  &.slow{
+    pointer-events: all;
+  }
 }
 .line {
   display: flex;
@@ -485,6 +488,9 @@ ul {
   letter-spacing: -3px;
   white-space: nowrap;
   text-transform: uppercase;
+  &.slow{
+    font-size: 3rem;
+  }
 }
 .animation-marquee{
   animation: marquee 40s linear infinite;
@@ -508,18 +514,33 @@ ul {
 }
 // stagger the individual line animation speed a bit
 .line:nth-child(2) > p {
-  animation-duration: 50s;
+  animation-duration: 30s;
 }
 .line:nth-child(3) > p {
-  animation-duration: 60s;
+  animation-duration: 30s;
 }
 .line:nth-child(4) > p {
-  animation-duration: 70s;
+  animation-duration: 30s;
 }
 .line:nth-child(5) > p {
-  animation-duration: 80s;
+  animation-duration: 30s;
 }
 
+.slow.line:nth-child(1) > p {
+  animation-duration: 50s;
+}
+.slow.line:nth-child(2) > p {
+  animation-duration: 50s;
+}
+.slow.line:nth-child(3) > p {
+  animation-duration: 50s;
+}
+.slow.line:nth-child(4) > p {
+  animation-duration: 50s;
+}
+.slow.line:nth-child(5) > p {
+  animation-duration: 50s;
+}
 
 @media (prefers-reduced-motion: reduce) {
     *,
