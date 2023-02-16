@@ -8,7 +8,7 @@ $transition: all 0.4s ease-in-out;
 $transition-slower: all 1s ease-in-out;
 $border: 2px solid var(--primary);
 $button-radius: 100px;
-$parimary-opacity-50: rgba(27, 200, 117, .25);
+$primary-opacity-50: rgba(27, 200, 117, .25);
 
 body {
   background-color: var(--light);
@@ -23,9 +23,11 @@ a {
   position: relative;
   text-decoration: none;
   color: rgba(var(--dark), 0.8);
+
   &:hover {
     color: var(--primary);
   }
+
   &:after {
     content: "";
     width: 100%;
@@ -38,21 +40,23 @@ a {
   }
 }
 
-.txt-primary{
+.txt-primary {
   color: var(--primary);
 }
 
-.card a{
-  &::after{
+.card a {
+  &::after {
     display: none;
   }
 }
+
 a.external-link {
   background-color: rgba(var(--primary), 0.3);
   color: var(--dark);
   border-radius: 3px;
   position: relative;
   transition: all 0.2s ease-in-out;
+
   &::after {
     content: "";
     display: block;
@@ -64,6 +68,7 @@ a.external-link {
     transition: $transition;
     z-index: -1;
   }
+
   &:hover {
     &::after {
       right: 0;
@@ -76,19 +81,21 @@ a.external-link {
 
 .button {
   padding: 4px 15px;
+
   &.primary {
     border: $border;
     border-radius: $button-radius;
     background-color: transparent;
     color: var(--dark);
+
     &:hover {
       background-color: var(--primary);
     }
   }
 }
 
-a.button{
-  &:after{
+a.button {
+  &:after {
     display: none;
   }
 }
@@ -109,6 +116,7 @@ header,
   gap: 0.5rem;
   flex-direction: column;
   transform: $transition;
+
   @media (max-width: 1023px) {
     &.scrolled {
       mix-blend-mode: difference;
@@ -121,36 +129,46 @@ header,
 
 .header {
   width: 100%;
+
   @media (max-width: 1023px) {
     width: auto;
   }
+
   flex-direction: column;
-  &.scrolled{
+
+  &.scrolled {
     mix-blend-mode: difference;
     top: 0;
     right: 0;
     width: auto;
+
     .heading {
       color: rgb(167, 180, 193);
       isolation: isolate;
+
       &:hover {
         color: invert(rgb(27, 200, 117));
       }
     }
-    .button.primary{
-      border-color:rgb(213, 67, 158);    
+
+    .button.primary {
+      border-color: rgb(213, 67, 158);
       isolation: isolate;
-      &:hover{
-        background-color:rgb(213, 67, 158);
+
+      &:hover {
+        background-color: rgb(213, 67, 158);
         color: #000;
       }
     }
-    a{
-      color: invert( rgb(88, 75, 62));
-      &:hover{
+
+    a {
+      color: invert(rgb(88, 75, 62));
+
+      &:hover {
         color: invert(rgb(27, 200, 117));
       }
-      small{
+
+      small {
         color: invert(rgb(167, 180, 193));
       }
     }
@@ -211,10 +229,12 @@ p {
     font-size: 2rem;
     letter-spacing: -0.05rem;
   }
+
   h1 {
     font-size: 1.8rem;
     letter-spacing: -0.05rem;
   }
+
   h2,
   h3,
   h4,
@@ -245,9 +265,11 @@ p {
   0% {
     transform: translateY(0);
   }
+
   50% {
     transform: translateY(-10px);
   }
+
   100% {
     transform: translateY(0);
   }
@@ -257,9 +279,11 @@ p {
   0% {
     transform: translateX(0);
   }
+
   50% {
     transform: translateX(10px);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -267,34 +291,45 @@ p {
 
 .intro {
   z-index: -1;
-  @media (max-width: 1365px){
+
+  @media (max-width: 1365px) {
     overflow: hidden;
   }
+
   @media (min-width: 1366px) {
     position: fixed;
+
     svg {
       height: 70vh;
     }
+
     .w-on-the-edge {
       height: 9.5vh;
     }
+
     .w-squat {
       height: 60vh;
     }
+
     cursor: none;
   }
+
   transition: $transition;
+
   .w-on-the-edge {
     z-index: -1;
     transition: $transition;
   }
+
   .w-squat {
     opacity: 0;
     z-index: -1;
   }
+
   svg {
     z-index: -1;
     transition: $transition;
+
     #han-part2 {
       path {
         opacity: 1;
@@ -302,6 +337,7 @@ p {
         @include delay;
       }
     }
+
     #anyu {
       path {
         opacity: 0.1;
@@ -319,19 +355,24 @@ p {
       padding-left: 40px;
     }
   }
+
   transition: $transition;
+
   .w-on-the-edge {
     transform: rotate(180deg);
     transition: $transition;
     opacity: 0;
   }
+
   .w-squat {
     opacity: 0;
     transform: rotate(180deg);
     transition: $transition;
   }
+
   svg {
     transform: rotate(90deg);
+
     #anyu {
       path {
         opacity: 1;
@@ -339,6 +380,7 @@ p {
         @include delayMore;
       }
     }
+
     #han-part2 {
       path {
         opacity: 0.1;
@@ -373,32 +415,39 @@ hr {
   opacity: 0;
   transform: translateX(50%);
   transition: $transition;
+
   &.loaded {
     opacity: 1;
     transform: translateX(0);
     transition: $transition;
   }
 }
+
 .article {
   img {
     margin-bottom: 1rem;
   }
+
   iframe {
     width: 90%;
     margin: 0 auto;
     display: block;
   }
-  img{
+
+  img {
     max-width: 100%;
   }
+
   @media (min-width: 768px) {
+
     p,
-    > ul,
-    > ol {
+    >ul,
+    >ol {
       margin-left: 41.66666667%;
       flex: 0 0 auto;
       width: 33.33333333%;
     }
+
     img,
     iframe {
       margin-left: 41.66666667%;
@@ -407,42 +456,46 @@ hr {
     }
   }
 }
+
 ol,
 ul {
   list-style-position: inside;
 }
 
-.book{
+.book {
   overflow: hidden;
   width: 98px;
   height: 88px;
 }
 
-.bg-green{
+.bg-green {
   background-color: var(--primary);
 }
 
-.bg-green-o50{
+.bg-green-o50 {
   background-color: rgba(27, 200, 117, .25);
 }
 
-.landing-card{
+.landing-card {
   transition: $transition;
   background-color: #fff;
+
   @media (min-width: 1366px) {
     margin: 0 1rem 0 0;
-    &:hover{
-      color:rgba(var(--light), 0.8);
+
+    &:hover {
+      color: rgba(var(--light), 0.8);
       margin: 0 0 0 1rem;
       box-shadow: 0 5px 5px rgba(88, 75, 62, .1);
     }
   }
 }
 
-.article-nav-link-wrap{
+.article-nav-link-wrap {
+
   &:focus,
-  &:active{
-    background-color: $parimary-opacity-50;
+  &:active {
+    background-color: $primary-opacity-50;
   }
 }
 
@@ -450,6 +503,7 @@ ul {
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(359deg);
   }
@@ -457,4 +511,16 @@ ul {
 
 .rotate {
   animation: rotation 80s linear infinite;
+}
+
+@media (max-width: 1600px) {
+  .overwrite-width {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+
+.tag {
+  border-radius: 20px;
+  background-color: rgba(88, 75, 62, .1);
 }

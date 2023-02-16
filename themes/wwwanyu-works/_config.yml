@@ -1,7 +1,7 @@
 # Header
 menu:
+  side project: /side-project/
   blog: /blog/
-  booklist: /booklist/
 
 # Content
 excerpt_link: Read More
