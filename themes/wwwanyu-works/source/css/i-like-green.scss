@@ -295,7 +295,7 @@ p {
   z-index: -1;
 
   @media (max-width: 1365px) {
-    overflow: hidden;
+    display: none;
   }
 
   @media (min-width: 1366px) {
@@ -351,7 +351,7 @@ p {
 }
 
 .rotate-intro {
-  @media (min-width: 768px) {
+  @media (min-width: 1366px) {
     svg {
       padding-top: 90px;
       padding-left: 40px;
@@ -390,22 +390,6 @@ p {
         @include delay;
       }
     }
-  }
-}
-
-.intro-cursor {
-  @media (min-width: 376px) {
-    display: block;
-    position: absolute;
-    background-color: var(--primary);
-    width: 20px;
-    height: 20px;
-    transition: 0.3s cubic-bezier(0.75, -1.27, 0.3, 2.33) transform,
-      0.2s cubic-bezier(0.75, -0.27, 0.3, 1.33) opacity;
-    user-select: none;
-    pointer-events: none;
-    z-index: 10000;
-    border-radius: 100%;
   }
 }
 
