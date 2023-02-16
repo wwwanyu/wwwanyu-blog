@@ -6,7 +6,7 @@ tags: reading
 ---
 
 我的隱形收入！
-{% asset_img four-books.jpeg%}
+{% asset_img d-block mx-auto img-fluid four-books.jpeg%}
 
 <!--More-->
 

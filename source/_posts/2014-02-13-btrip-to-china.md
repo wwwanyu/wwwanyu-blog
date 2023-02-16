@@ -7,7 +7,7 @@ tags: travel
 
 從小港機場出發到蕭山機場，入境中國的時候，除了網路作廢，完全沒有出國的感覺 😰
 
-{% asset_img IMG_3992.jpg 人民幣紙鈔，毛澤東臉部的部分被折過，倒置表情看起來很哀愁 %}
+{% asset_img d-block mx-auto img-fluid IMG_3992.jpg 人民幣紙鈔，毛澤東臉部的部分被折過，倒置表情看起來很哀愁 %}
 
 <!--more-->
 

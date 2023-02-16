@@ -6,7 +6,7 @@ tags: hiking
 ---
 
 2021 6 月有一件跟抹茶山相關的意外死亡新聞。
-{% asset_img dontgohikingalone.png LINE 截圖顯示文字訊息：「勿獨攀」跟一條 Facebook 貼文網誌 %}
+{% asset_img d-block mx-auto img-fluid dontgohikingalone.png LINE 截圖顯示文字訊息：「勿獨攀」跟一條 Facebook 貼文網誌 %}
 
 <!--more-->
 

@@ -6,7 +6,7 @@ tags: travel
 ---
 
 從 2014 年末跨到 2015 年初。
-{% asset_img IMG_8807.jpg 去 Brooklyn Flea %}
+{% asset_img d-block mx-auto img-fluid IMG_8807.jpg 去 Brooklyn Flea %}
 
 <!--more-->
 
