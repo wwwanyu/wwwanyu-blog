@@ -1,36 +1,31 @@
 <header class="header d-flex p-2">
-  <div class="row">
-    <div class="col-12">
-      <div class="d-flex flex-row-reverse">
-        <a class="d-blcok" href="/" title="Home">
-          <h1 class="visually-hidden">
-            <%= config.title %>
-          </h1>
-          <h2 class="heading">
-            <img src="/images/www.gif" alt="Wanyu's logo">
-            <% if (config.subtitle){ %>
-              <span class="visually-hidden">
-                <%= config.subtitle %>
-              </span>
-              <% } %>
-          </h2>
-          <small>
-            <% if (config.subtitle){ %>
-              <%= config.description %>
-                <% } %>
-          </small>
-        </a>
-      </div>
-      <nav class="global-nav">
-        <% for (let i in theme.menu){ %>
-          <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>"
-            href="<%- url_for(theme.menu[i]) %>">
-            <%= i %>
-          </a>
+  <div class="wlogo d-flex flex-row-reverse">
+    <a class="d-blcok" href="/" title="Home">
+      <h1 class="visually-hidden">
+        <%= config.title %>
+      </h1>
+      <h2 class="heading">
+        <img src="/images/www.gif" alt="Wanyu's logo">
+        <% if (config.subtitle){ %>
+          <span class="visually-hidden">
+            <%= config.subtitle %>
+          </span>
           <% } %>
-      </nav>
-    </div>
+      </h2>
+      <small>
+        <% if (config.subtitle){ %>
+          <%= config.description %>
+            <% } %>
+      </small>
+    </a>
   </div>
+  <nav class="global-nav ">
+    <% for (let i in theme.menu){ %>
+      <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>" href="<%- url_for(theme.menu[i]) %>">
+        <%= i %>
+      </a>
+      <% } %>
+  </nav>
   <% if (theme.rss){ %>
     <a href="<%- url_for(theme.rss) %>" title="<%= __('rss_feed') %>"></a>
     <% } %>

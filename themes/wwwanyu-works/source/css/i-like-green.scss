@@ -129,18 +129,20 @@ header,
 
 .header {
   width: 100%;
-
-  @media (max-width: 1023px) {
-    width: auto;
-  }
-
   flex-direction: column;
 
   &.scrolled {
+    width: 100%;
     mix-blend-mode: difference;
     top: 0;
     right: 0;
     width: auto;
+
+    @media (max-width: 768px) {
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
 
     .heading {
       color: rgb(167, 180, 193);
