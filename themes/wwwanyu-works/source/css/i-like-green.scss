@@ -414,32 +414,8 @@ hr {
     margin-bottom: 1rem;
   }
 
-  iframe {
-    width: 90%;
-    margin: 0 auto;
-    display: block;
-  }
-
   img {
     max-width: 100%;
-  }
-
-  @media (min-width: 768px) {
-
-    p,
-    >ul,
-    >ol {
-      margin-left: 41.66666667%;
-      flex: 0 0 auto;
-      width: 33.33333333%;
-    }
-
-    img,
-    iframe {
-      margin-left: 41.66666667%;
-      flex: 0 0 auto;
-      width: 58.33333333%;
-    }
   }
 }
 
