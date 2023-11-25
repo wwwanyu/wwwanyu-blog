@@ -19,6 +19,12 @@ body {
   overflow-x: hidden;
 }
 
+body,
+html {
+  margin: 0;
+  padding: 0;
+}
+
 a {
   position: relative;
   text-decoration: none;
@@ -485,4 +491,21 @@ ul {
 .tag {
   border-radius: 20px;
   background-color: rgba(88, 75, 62, .1);
+}
+
+.video-container {
+  // position: fixed;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
 }
