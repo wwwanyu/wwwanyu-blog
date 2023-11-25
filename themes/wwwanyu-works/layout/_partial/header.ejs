@@ -21,7 +21,7 @@
       </small>
     </a>
   </div>
-  <nav class="global-nav ">
+  <nav class="global-nav">
     <% for (let i in theme.menu){ %>
       <a class="button primary <% if(is_current(theme.menu[i])){ %>active<% } %>" href="<%- url_for(theme.menu[i]) %>">
         <%= i %>
