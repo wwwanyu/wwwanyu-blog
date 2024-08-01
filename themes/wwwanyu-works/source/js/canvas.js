@@ -1,9 +1,10 @@
 const canvas = document.querySelector("#canvas1");
 const ctx = canvas.getContext('2d');
-const CANVAS_WIDTH = canvas.width = window.innerWidth;
-const CANVAS_HEIGHT = canvas.height = window.innerHeight;
-const Base = { x: 400, y: 610 };
-const radius = 280;
+const CANVAS_WIDTH = canvas.width = window.innerWidth * 0.99;
+const CANVAS_HEIGHT = canvas.height = window.innerHeight * 0.99 - 100;
+
+const Base = { x: 200, y: 440 };
+const radius = 200;
 const mouse = new Image();
 let mouseWidth = 100;
 let mouseHeight = 100;
@@ -20,8 +21,8 @@ function animate() {
     ctx.fillStyle = "rgba(0,255,10, 0.4)";
     ctx.beginPath();
     ctx.strokeStyle = '#00FF0A';
-    ctx.moveTo(700, 340);
-    ctx.arc(400, 330, 300, 0, Math.PI * 2, true);
+    ctx.moveTo(410, 260);
+    ctx.arc(200, 240, 210, 0, Math.PI * 2, true);
     ctx.stroke();
     ctx.moveTo(Base.x, Base.y);
     ctx.beginPath();
@@ -54,7 +55,25 @@ canvas.addEventListener('mousedown', e => {
         draggable = true;
     }
 })
+canvas.addEventListener('touchstart', e => {
+    if (
+        e.layerX <= (mouseX + mouseWidth) &&
+        e.layerX >= (mouseX) &&
+        e.layerY <= (mouseY + mouseHeight) &&
+        e.layerY >= (mouseY)
+    ) {
+        draggable = true;
+    }
+})
 canvas.addEventListener('mousemove', e => {
+    if (draggable) {
+        mouseX = e.layerX - (mouseWidth / 2);
+        mouseY = e.layerY - 40;
+        mouseWidth = 200
+        mouseHeight = 200
+    }
+})
+canvas.addEventListener('touchmove', e => {
     if (draggable) {
         mouseX = e.layerX - (mouseWidth / 2);
         mouseY = e.layerY - 40;
@@ -69,7 +88,15 @@ canvas.addEventListener('mouseup', e => {
     mouseX = e.layerX - (mouseWidth / 2);
     mouseY = e.layerY - (mouseHeight / 2) + 10;
 })
+canvas.addEventListener('touchend', e => {
+    draggable = false;
+    mouseWidth = 100;
+    mouseHeight = 100;
+    mouseX = e.layerX - (mouseWidth / 2);
+    mouseY = e.layerY - (mouseHeight / 2) + 10;
+})
 
 //Todo:
 // 1. make it draggable in the web browser on mobile phones
 // 2. when the mouse entered one of the squares, make it react
+// 3. make canvas web page responsive
