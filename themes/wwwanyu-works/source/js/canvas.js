@@ -5,11 +5,13 @@ const CANVAS_HEIGHT = canvas.height = window.innerHeight;
 const Base = { x: 400, y: 610 };
 const radius = 280;
 const mouse = new Image();
-const mouseWidth = 200;
-const mouseHeight = 200;
+let mouseWidth = 100;
+let mouseHeight = 100;
 let mouseX = CANVAS_WIDTH - mouseWidth,
     mouseY = 0;
 let draggable = false;
+let overlay = false;
+let vertexX = 0;
 mouse.src = '/images/evil-pentagram/mouse.png';
 
 function animate() {
@@ -31,9 +33,9 @@ function animate() {
     }
     for (var i = 1; i <= 5; ++i) {
         var th = i * 4 * Math.PI / 5;
-        var x = Base.x - radius * Math.sin(th);
+        vertexX = Base.x - radius * Math.sin(th);
         var y = Base.y - radius + radius * Math.cos(th);
-        ctx.fillRect(x - 30, y - 30, 60, 60);
+        ctx.fillRect(vertexX - 50, y - 50, 100, 100);
     }
     ctx.lineJoin = 'miter';
     ctx.closePath();
@@ -52,14 +54,22 @@ canvas.addEventListener('mousedown', e => {
         draggable = true;
     }
 })
-
 canvas.addEventListener('mousemove', e => {
     if (draggable) {
         mouseX = e.layerX - (mouseWidth / 2);
-        mouseY = e.layerY - (mouseHeight / 2);
+        mouseY = e.layerY - 40;
+        mouseWidth = 200
+        mouseHeight = 200
     }
 })
-
 canvas.addEventListener('mouseup', e => {
     draggable = false;
+    mouseWidth = 100;
+    mouseHeight = 100;
+    mouseX = e.layerX - (mouseWidth / 2);
+    mouseY = e.layerY - (mouseHeight / 2) + 10;
 })
+
+//Todo:
+// 1. make it draggable in the web browser on mobile phones
+// 2. when the mouse entered one of the squares, make it react
