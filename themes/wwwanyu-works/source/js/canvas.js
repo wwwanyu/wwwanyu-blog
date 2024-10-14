@@ -22,7 +22,7 @@ mouse.src = '/images/evil-pentagram/mouse.png';
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.lineWidth = 10;
-    ctx.fillStyle = "rgba(0,255,10, 0.4)";
+    ctx.fillStyle = "rgba(84,162,255, 1)";
     // randomColors = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
     // color = `rgb(${this.randomColors[0]}, ${this.randomColors[1]}, ${this.randomColors[2]})`;
     ctx.beginPath();
@@ -62,45 +62,18 @@ canvas.addEventListener('mousedown', e => {
         draggable = true;
     }
 })
-canvas.addEventListener('touchstart', e => {
-    if (
-        e.layerX <= (mouseX + mouseWidth) &&
-        e.layerX >= (mouseX) &&
-        e.layerY <= (mouseY + mouseHeight) &&
-        e.layerY >= (mouseY)
-    ) {
-        draggable = true;
-    }
-})
 canvas.addEventListener('mousemove', e => {
     if (draggable) {
         mouseX = e.layerX - (mouseWidth / 2);
         mouseY = e.layerY - 40;
-        mouseWidth = 200
-        mouseHeight = 200
-    }
-})
-canvas.addEventListener('touchmove', e => {
-    if (draggable) {
-        mouseX = e.layerX - (mouseWidth / 2);
-        mouseY = e.layerY - 40;
-        mouseWidth = 200
-        mouseHeight = 200
+        mouseWidth = 140
+        mouseHeight = 140
     }
 })
 canvas.addEventListener('mouseup', e => {
     draggable = false;
     mouseWidth = 100;
     mouseHeight = 100;
-    mouseX = e.layerX - (mouseWidth / 2);
-    mouseY = e.layerY - (mouseHeight / 2) + 10;
-})
-canvas.addEventListener('touchend', e => {
-    draggable = false;
-    mouseWidth = 100;
-    mouseHeight = 100;
-    mouseX = e.layerX - (mouseWidth / 2);
-    mouseY = e.layerY - (mouseHeight / 2) + 10;
 })
 
 //Todo:
