@@ -127,11 +127,10 @@ header,
     flex-direction: row;
   }
 
-  @media (max-width: 1023px) {
+  @media (min-width: 769px) {
     &.scrolled {
       mix-blend-mode: difference;
       transform: $transition;
-      flex-direction: row;
       flex-wrap: wrap;
     }
   }
@@ -140,6 +139,10 @@ header,
 .header {
   flex-direction: column;
   right: 0;
+
+  @media (min-width: 769px) {
+    position: absolute;
+  }
 
   @media (max-width: 768px) {
     width: 100%;
