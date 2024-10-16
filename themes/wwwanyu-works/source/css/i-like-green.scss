@@ -123,6 +123,10 @@ header,
   flex-direction: column;
   transform: $transition;
 
+  @media (max-width: 768px) {
+    flex-direction: row;
+  }
+
   @media (max-width: 1023px) {
     &.scrolled {
       mix-blend-mode: difference;
@@ -134,11 +138,18 @@ header,
 }
 
 .header {
-  width: 100%;
   flex-direction: column;
+  right: 0;
+
+  @media (max-width: 768px) {
+    width: 100%;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    right: initial;
+  }
 
   &.scrolled {
-    width: 100%;
     mix-blend-mode: difference;
     top: 0;
     right: 0;
