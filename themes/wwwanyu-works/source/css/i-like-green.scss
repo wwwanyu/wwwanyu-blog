@@ -96,6 +96,7 @@ a.external-link {
 
     &:hover {
       background-color: var(--primary);
+      color: var(--dark);
     }
   }
 }
@@ -165,6 +166,17 @@ header,
       justify-content: space-between;
     }
 
+    .button.primary {
+      border-color: rgb(213, 67, 158);
+      color: rgb(213, 67, 158);
+      isolation: isolate;
+
+      &:hover {
+        background-color: rgb(213, 67, 158);
+        color: invert(rgb(88, 75, 62));
+      }
+    }
+
     .heading {
       color: rgb(167, 180, 193);
       isolation: isolate;
@@ -174,22 +186,8 @@ header,
       }
     }
 
-    .button.primary {
-      border-color: rgb(213, 67, 158);
-      isolation: isolate;
-
-      &:hover {
-        background-color: rgb(213, 67, 158);
-        color: #000;
-      }
-    }
-
     a {
       color: invert(rgb(88, 75, 62));
-
-      &:hover {
-        color: invert(rgb(27, 200, 117));
-      }
 
       small {
         color: invert(rgb(167, 180, 193));
@@ -414,7 +412,7 @@ p {
 }
 
 hr {
-  border: $border;
+  border: 2px solid var(--dark);
 }
 
 .ioLazyload {
