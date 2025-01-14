@@ -5,12 +5,17 @@ const ctx_verteces = verteces_canvas.getContext('2d');
 const pentagramBase = { x: 200, y: 440 };
 const radius = 200;
 const mouse = new Image();
+const fish = new Image();
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 verteces_canvas.width = window.innerWidth;
 verteces_canvas.height = window.innerHeight;
 let mouseWidth = 100;
 let mouseHeight = 100;
+let fishWidth = 100;
+let fishHeight = 100;
+let fishX = canvas.width - fishWidth,
+    fishY = mouseHeight + 10;
 let mouseX = canvas.width - mouseWidth,
     mouseY = 0;
 let draggable = false;
@@ -18,19 +23,16 @@ let overlay = false;
 let vertexX = 0;
 
 mouse.src = '/images/evil-pentagram/mouse.png';
+fish.src = '/images/evil-pentagram/fish.png'
 
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.lineWidth = 10;
-    ctx.fillStyle = "rgba(84,162,255, 1)";
-    // randomColors = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
-    // color = `rgb(${this.randomColors[0]}, ${this.randomColors[1]}, ${this.randomColors[2]})`;
     ctx.beginPath();
     ctx.strokeStyle = '#00FF0A';
     ctx.moveTo(410, 260);
     ctx.arc(200, 240, 210, 0, Math.PI * 2);
     ctx.stroke();
-
     ctx.moveTo(pentagramBase.x, pentagramBase.y);
     ctx.beginPath();
     for (var i = 1; i <= 5; ++i) {
@@ -51,7 +53,12 @@ function animate() {
     ctx.drawImage(mouse, mouseX, mouseY, mouseWidth, mouseHeight);
     requestAnimationFrame(animate);
 }
+
 animate();
+
+randomColors = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
+ctx.fillStyle = `rgba(${randomColors}, 1)`;
+
 canvas.addEventListener('mousedown', e => {
     if (
         e.layerX <= (mouseX + mouseWidth) &&
@@ -60,8 +67,10 @@ canvas.addEventListener('mousedown', e => {
         e.layerY >= (mouseY)
     ) {
         draggable = true;
+        console.log('mouse!');
     }
 })
+
 canvas.addEventListener('mousemove', e => {
     if (draggable) {
         mouseX = e.layerX - (mouseWidth / 2);
@@ -70,15 +79,19 @@ canvas.addEventListener('mousemove', e => {
         mouseHeight = 140
     }
 })
+
 canvas.addEventListener('mouseup', e => {
     draggable = false;
     mouseWidth = 100;
     mouseHeight = 100;
+    console.log(e)
 })
 
 //Todo:
 // 1. when the mouse entered one of the squares, make it react
 //  - get the area of pentacle
 //  - watch the part detect by color in raven tutorail, to see if we can use it
+//  - Make 5 squares background color as random color
+//  - Add 4 more objects
 // 2. make canvas web page responsive
-// 3. improve the drag&drop experience on android
+// 3. improve the drag&drop experience on mobile
