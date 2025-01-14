@@ -1,5 +1,5 @@
 ---
-title: Web3Matters Logo 徵選 - I-Just-Matter
+title: Web3Matters Logo 徵選：I-Just-Matter
 date: 2024-09-18 17:31:17
 tags: design
 ---

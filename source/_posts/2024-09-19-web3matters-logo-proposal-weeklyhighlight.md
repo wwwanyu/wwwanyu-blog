@@ -1,5 +1,5 @@
 ---
-title: Web3Matters Logo 徵選 - Weekly Highlight 👀
+title: Web3Matters Logo 徵選：Weekly Highlight 👀
 date: 2024-09-19 12:14:15
 tags: design
 ---
