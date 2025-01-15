@@ -67,7 +67,6 @@ canvas.addEventListener('mousedown', e => {
         e.layerY >= (mouseY)
     ) {
         draggable = true;
-        console.log('mouse!');
     }
 })
 
