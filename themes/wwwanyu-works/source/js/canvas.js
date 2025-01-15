@@ -81,17 +81,21 @@ canvas.addEventListener('mousemove', e => {
 })
 
 canvas.addEventListener('mouseup', e => {
+    const imageDatas = ctx.getImageData(mouseX + 50, mouseY + 50, 1, 1).data;
     draggable = false;
     mouseWidth = 100;
     mouseHeight = 100;
-    console.log(e)
+    const r = imageDatas[0];
+    const g = imageDatas[1];
+    const b = imageDatas[2];
+    const a = imageDatas[3] / 255;
+
+    // Log the RGBA values
+    console.log(`RGBA: (${r}, ${g}, ${b}, ${a})`);
+    console.log(`mouse is at x:${mouseX}, y:${mouseY}`);
 })
 
 //Todo:
-// 1. when the mouse entered one of the squares, make it react
-//  - get the area of pentacle
-//  - watch the part detect by color in raven tutorail, to see if we can use it
-//  - Make 5 squares background color as random color
-//  - Add 4 more objects
+// 1. Add more objects
 // 2. make canvas web page responsive
 // 3. improve the drag&drop experience on mobile
