@@ -41,15 +41,15 @@ function animate() {
         var y = pentagramBase.y - radius + radius * Math.cos(th);
         ctx.lineTo(x, y);
     }
+    ctx.lineJoin = 'miter';
+    ctx.closePath();
+    ctx.stroke();
     for (var i = 1; i <= 5; ++i) {
         var th = i * 4 * Math.PI / 5;
         vertexX = pentagramBase.x - radius * Math.sin(th);
         var y = pentagramBase.y - radius + radius * Math.cos(th);
         ctx.fillRect(vertexX - 50, y - 50, 100, 100);
     }
-    ctx.lineJoin = 'miter';
-    ctx.closePath();
-    ctx.stroke();
     ctx.drawImage(mouse, mouseX, mouseY, mouseWidth, mouseHeight);
     requestAnimationFrame(animate);
 }
