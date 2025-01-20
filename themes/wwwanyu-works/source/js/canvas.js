@@ -21,10 +21,16 @@ let mouseX = canvas.width - mouseWidth,
 let draggable = false;
 let overlay = false;
 let vertexX = 0;
+let evilScore = 0;
 
+ctx.font = '24px Arial';
 mouse.src = '/images/evil-pentagram/mouse.png';
-fish.src = '/images/evil-pentagram/fish.png'
+fish.src = '/images/evil-pentagram/fish.png';
 
+function evilLevel() {
+    ctx.fillStyle = 'green';
+    ctx.fillText('Evil: ' + evilScore, 10, 520);
+}
 function animate() {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
     ctx.lineWidth = 10;
@@ -50,6 +56,7 @@ function animate() {
         var y = pentagramBase.y - radius + radius * Math.cos(th);
         rectangles_ctx.fillRect(vertexX - 50, y - 50, 100, 100);
     }
+    evilLevel();
     ctx.drawImage(mouse, mouseX, mouseY, mouseWidth, mouseHeight);
     requestAnimationFrame(animate);
 }
@@ -88,12 +95,16 @@ window.addEventListener('mouseup', e => {
     const b = imageDatas[2];
     const a = imageDatas[3] / 255;
 
+    if (r === randomColors[0] && g === randomColors[1] && b === randomColors[2]) {
+        evilScore++;
+    }
     // Log the RGBA values
     console.log(`RGBA: (${r}, ${g}, ${b}, ${a})`);
     console.log(`mouse is at x:${mouseX}, y:${mouseY}`);
 })
 
 //Todo:
-// 1. Add more objects
-// 2. make canvas web page responsive
-// 3. improve the drag&drop experience on mobile
+// 1. Make the reaction of the mouse is dropped on the pentagram
+// 2. Add more objects
+// 3. make canvas web page responsive
+// 4. improve the drag&drop experience on mobile
