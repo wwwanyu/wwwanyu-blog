@@ -1,15 +1,15 @@
 const canvas = document.querySelector("#canvas1");
-// const verteces_canvas = document.querySelector("#vertecesCanvas");
+const rectangles_canvas = document.querySelector("#rectangles");
 const ctx = canvas.getContext('2d');
-// const ctx_verteces = verteces_canvas.getContext('2d');
+const rectangles_ctx = rectangles_canvas.getContext('2d');
 const pentagramBase = { x: 200, y: 440 };
 const radius = 200;
 const mouse = new Image();
 const fish = new Image();
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
-// verteces_canvas.width = window.innerWidth;
-// verteces_canvas.height = window.innerHeight;
+rectangles_canvas.width = window.innerWidth;
+rectangles_canvas.height = window.innerHeight;
 let mouseWidth = 100;
 let mouseHeight = 100;
 let fishWidth = 100;
@@ -48,18 +48,17 @@ function animate() {
         var th = i * 4 * Math.PI / 5;
         vertexX = pentagramBase.x - radius * Math.sin(th);
         var y = pentagramBase.y - radius + radius * Math.cos(th);
-        ctx.fillRect(vertexX - 50, y - 50, 100, 100);
+        rectangles_ctx.fillRect(vertexX - 50, y - 50, 100, 100);
     }
     ctx.drawImage(mouse, mouseX, mouseY, mouseWidth, mouseHeight);
     requestAnimationFrame(animate);
 }
-
 animate();
 
 randomColors = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
-ctx.fillStyle = `rgba(${randomColors}, 1)`;
+rectangles_ctx.fillStyle = `rgba(${randomColors}, 1)`;
 
-canvas.addEventListener('mousedown', e => {
+window.addEventListener('mousedown', e => {
     if (
         e.layerX <= (mouseX + mouseWidth) &&
         e.layerX >= (mouseX) &&
@@ -70,7 +69,7 @@ canvas.addEventListener('mousedown', e => {
     }
 })
 
-canvas.addEventListener('mousemove', e => {
+window.addEventListener('mousemove', e => {
     if (draggable) {
         mouseX = e.layerX - (mouseWidth / 2);
         mouseY = e.layerY - 40;
@@ -79,8 +78,8 @@ canvas.addEventListener('mousemove', e => {
     }
 })
 
-canvas.addEventListener('mouseup', e => {
-    const imageDatas = ctx.getImageData(mouseX + 50, mouseY + 50, 1, 1).data;
+window.addEventListener('mouseup', e => {
+    const imageDatas = rectangles_ctx.getImageData(mouseX + 50, mouseY + 50, 1, 1).data;
     draggable = false;
     mouseWidth = 100;
     mouseHeight = 100;
