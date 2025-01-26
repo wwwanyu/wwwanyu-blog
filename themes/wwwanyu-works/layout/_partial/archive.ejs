@@ -8,11 +8,12 @@
       <% } else { %>
       <% var last; %>
       <% page.posts.each(function(post, i){ %>
-        <% var year = post.date.year(); %>
-          <% if (last != year){ %>
-          <% if (last != null){ %>
-        <% } %>
-        <% last = year; %>
+      <% var year = post.date.year(); %>
+      <% if (last != year){ %>
+      <% if (last != null){ %>
+      <% } %>
+
+      <% last = year; %>
       <div class="topping">
         <a href="<%- url_for(config.archive_dir + '/' + year) %>"><%= year %></a>
       </div>
@@ -25,8 +26,9 @@
         <% if (page.posts.length){ %>
         <% } %>
       </ul>
-    <% } %>
-    <% if (page.total > 1){ %>
+      <% } %>
+
+      <% if (page.total > 1){ %>
       <nav id="page-nav" class="d-flex gap-3 mb-5 px-4">
         <% var prev_text = __('prev');var next_text = __('next')%>
         <%- paginator({
@@ -38,4 +40,3 @@
     </div>
   </div>
 </main>
-
