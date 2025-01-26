@@ -61,10 +61,19 @@ highlight:
 # path: Root path for your blogs index page. (default = '')
 # per_page: Posts displayed per page. (0 = disable pagination)
 # order_by: Posts order. (Order by date descending by default)
+
+# Home page setting
 index_generator:
   path: ""
-  per_page: 10
+  per_page: 6  # Show the latest 6 posts on the homepage
   order_by: -date
+
+# Archive page setting
+archive_generator:
+  per_page: 10  # Show 10 posts per page on the blog list page
+  yearly: false
+  monthly: false
+  daily: false
 
 # Category & Tag
 default_category: uncategorized
