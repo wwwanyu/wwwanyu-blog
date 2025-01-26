@@ -411,6 +411,14 @@ p {
   }
 }
 
+.intro-spline {
+  height: 40vh;
+
+  @media (max-width: 1366px) {
+    height: 300px;
+  }
+}
+
 hr {
   border: 2px solid var(--dark);
 }
