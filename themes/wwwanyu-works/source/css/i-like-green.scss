@@ -46,6 +46,13 @@ a {
   }
 }
 
+a.fancybox,
+a.fancybox-close {
+  &:after {
+    display: none;
+  }
+}
+
 .txt-primary {
   color: var(--primary);
 }
