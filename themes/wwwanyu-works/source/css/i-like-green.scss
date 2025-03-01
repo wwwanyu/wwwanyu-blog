@@ -535,3 +535,9 @@ ul {
   object-fit: cover;
   z-index: -1;
 }
+
+.post-excerpt {
+  img {
+    max-height: 240px;
+  }
+}
