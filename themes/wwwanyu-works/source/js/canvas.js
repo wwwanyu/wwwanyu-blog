@@ -62,10 +62,8 @@ function animate() {
     ctx.drawImage(mouse, mouseX, mouseY, mouseWidth, mouseHeight);
     requestAnimationFrame(animate);
 }
-animate();
 
-randomColors = [Math.floor(Math.random() * 255), Math.floor(Math.random() * 255), Math.floor(Math.random() * 255)];
-rectangles_ctx.fillStyle = `rgba(${randomColors}, 1)`;
+animate();
 
 window.addEventListener('mousedown', e => {
     if (
