@@ -95,7 +95,6 @@ window.addEventListener('mouseup', e => {
     const r = imageDatas[0];
     const g = imageDatas[1];
     const b = imageDatas[2];
-    const a = imageDatas[3] / 255;
 
     if (r === randomColors[0] && g === randomColors[1] && b === randomColors[2]) {
         evilScore++;
